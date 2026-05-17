@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { SpaceManifest, Segment, TrackSegment } from "@/lib/channel-types";
 import { MiraOrb } from "./MiraOrb";
 import { SCENES } from "./scenes";
@@ -18,7 +18,13 @@ interface Props {
 }
 
 export function ChannelPlayer({ manifest }: Props) {
-  const segments = manifest.segments;
+  // Skip "intro" segments in the play flow — the first track's DJ intro
+  // carries the opening. Avoids back-to-back DJ talks before any music.
+  // (Outro stays — the warm goodbye after the last song still plays.)
+  const segments = useMemo(
+    () => manifest.segments.filter((s) => s.type !== "intro"),
+    [manifest.segments]
+  );
 
   const [status, setStatus] = useState<Status>("ready");
   const [phase, setPhase] = useState<Phase>({ kind: "dj", index: 0, elapsedMs: 0, durationMs: 0 });
@@ -322,7 +328,7 @@ export function ChannelPlayer({ manifest }: Props) {
 
           {/* Attribution — small */}
           <p className="text-[9px] tracking-[0.25em] uppercase text-text/20 mt-1">
-            aniradio · narration · Chirp 3 HD &nbsp;·&nbsp; music · Lyria 3 Pro
+            aniradio · narration · ElevenLabs &nbsp;·&nbsp; music · Lyria 3 Pro
           </p>
         </div>
       </div>
@@ -463,7 +469,7 @@ function StartScreen({ manifest, onStart }: { manifest: SpaceManifest; onStart: 
         {trackCount} tracks · about {Math.round(trackCount * 2.3)} minutes · channel mode
       </p>
       <p className="absolute bottom-5 left-0 right-0 text-[10px] tracking-[0.2em] uppercase text-text/25 pointer-events-none">
-        aniradio · narration · Chirp 3 HD &nbsp;·&nbsp; music · Lyria 3 Pro
+        aniradio · narration · ElevenLabs &nbsp;·&nbsp; music · Lyria 3 Pro
       </p>
     </div>
   );

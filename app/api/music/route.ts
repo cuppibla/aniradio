@@ -64,7 +64,7 @@ export async function POST(req: Request) {
     const buf =
       typeof data === "string" ? Buffer.from(data, "base64") : Buffer.from(data as Uint8Array);
     const mime = audioPart.inlineData.mimeType ?? "audio/mpeg";
-    return new Response(buf, {
+    return new Response(new Uint8Array(buf), {
       headers: {
         "Content-Type": mime,
         "Cache-Control": "no-store",

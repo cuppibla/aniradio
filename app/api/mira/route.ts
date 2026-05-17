@@ -45,7 +45,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "no audio returned" }, { status: 500 });
     }
     const buf = Buffer.isBuffer(audio) ? audio : Buffer.from(audio as Uint8Array);
-    return new Response(buf, {
+    return new Response(new Uint8Array(buf), {
       headers: {
         "Content-Type": "audio/mpeg",
         "Cache-Control": "no-store",

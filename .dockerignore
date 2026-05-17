@@ -1,0 +1,43 @@
+# Anything matched here is NOT copied into the Docker build context.
+# Keep prod image lean + ensure no secrets/dev-only code ships.
+
+# Secrets — never ship
+.env
+.env.local
+.env.*.local
+
+# Build output / caches (rebuilt fresh)
+node_modules
+.next
+out
+build
+.turbo
+
+# Local state / version control
+.git
+.gitignore
+.claude
+.vscode
+.idea
+.DS_Store
+
+# Docs + screenshots — not needed at runtime
+README.md
+CHANGELOG.md
+LICENSE
+docs
+
+# Local-only files: generation pipeline + authoring sources
+# These run on Annie's laptop, not in the deployed container.
+scripts
+spaces
+
+# Deprecated live-generation API routes — kept in source for local dev
+# (npm run dev) and possible future revival, but never ship to prod.
+# Excluding them removes the only endpoints that would need GCP/ElevenLabs
+# credentials at runtime. The deployed app serves only static audio.
+app/api
+
+# Logs
+*.log
+npm-debug.log*
