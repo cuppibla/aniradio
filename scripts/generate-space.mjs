@@ -310,27 +310,35 @@ console.log(`Tracks: ${tracks.length}${args.limit && !onlyIds ? ` (limited from 
 console.log(`Output: ${path.relative(process.cwd(), outputDir)}`);
 console.log();
 
-// --resynth-voice: re-run Chirp on every segment's existing dj_intro_text
-// using the current voice config (speaking_rate, pitch). No Gemini, no Lyria.
+// --resynth-voice: re-run the TTS engine on every segment's existing
+// dj_intro_text using the current voice config. No Gemini, no Lyria.
 if (args["resynth-voice"]) {
   const manifestPath = path.join(outputDir, "manifest.json");
   const existing = JSON.parse(await fs.readFile(manifestPath, "utf8"));
-  console.log(
-    `→ re-synthesizing ${existing.segments.length} voice clips with rate=${week.dj.speaking_rate ?? 0.9} pitch=${week.dj.pitch ?? -1.0}`
-  );
-  await Promise.all(
-    existing.segments.map(async (seg) => {
-      if (!seg.dj_intro_text || !seg.dj_intro_url) return;
-      const filename = path.basename(seg.dj_intro_url);
-      const out = path.join(outputDir, filename);
-      try {
-        const bytes = await djSpeak(seg.dj_intro_text, out);
-        console.log(`  [${pad2(seg.order)}] ${filename} · ${bytes} bytes`);
-      } catch (e) {
-        console.error(`  [${pad2(seg.order)}] ${filename} FAILED · ${e.message}`);
-      }
-    })
-  );
+  const engine = week.dj.engine === "elevenlabs" ? "ElevenLabs" : "Chirp 3 HD";
+  console.log(`→ re-synthesizing ${existing.segments.length} voice clips via ${engine}`);
+
+  // ElevenLabs caps concurrent requests by plan (Starter: 4, Creator: 5, Pro: 10).
+  // Batch in small groups to stay under it. Chirp is more forgiving.
+  const concurrency = week.dj.engine === "elevenlabs" ? 3 : 8;
+  const segments = existing.segments.filter((s) => s.dj_intro_text && s.dj_intro_url);
+
+  for (let i = 0; i < segments.length; i += concurrency) {
+    const batch = segments.slice(i, i + concurrency);
+    await Promise.all(
+      batch.map(async (seg) => {
+        const filename = path.basename(seg.dj_intro_url);
+        const out = path.join(outputDir, filename);
+        try {
+          const bytes = await djSpeak(seg.dj_intro_text, out);
+          console.log(`  [${pad2(seg.order)}] ${filename} · ${bytes} bytes`);
+        } catch (e) {
+          console.error(`  [${pad2(seg.order)}] ${filename} FAILED · ${e.message.slice(0, 200)}`);
+        }
+      })
+    );
+  }
+
   const elapsed = ((Date.now() - startedAt) / 1000).toFixed(1);
   console.log(`\n✓ Resynth done in ${elapsed}s`);
   process.exit(0);
