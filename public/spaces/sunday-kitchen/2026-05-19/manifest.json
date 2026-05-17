@@ -1,0 +1,149 @@
+{
+  "slug": "sunday-kitchen",
+  "week_of": "2026-05-19",
+  "title": "toast and tea",
+  "theme": "the slow part of sunday morning, before anything has to happen",
+  "dj": {
+    "name": "Wren",
+    "voice": "en-US-Chirp3-HD-Zephyr",
+    "persona": "warm, conversational, the friend cooking in the next room. comfortable, slightly drowsy, kind. lowercase, '...' for pauses. notices the way light comes through windows, the smell of toast, the sound of a kettle starting to whistle. like she's making something for you too."
+  },
+  "palette": [
+    "#D18A5B",
+    "#5C3A2D"
+  ],
+  "segments": [
+    {
+      "order": 0,
+      "type": "intro",
+      "dj_intro_text": "toast and tea... the slow part of sunday morning. before anything has to happen. the sun is just starting to lean against the floorboards... it's quiet. i have twelve tracks for us. just something to keep the room warm while you choose between coffee or tea. the kettle is beginning to hum. that low sound before the whistle. we have time. no rush at all. okay. let's start.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/00-intro.mp3"
+    },
+    {
+      "order": 1,
+      "type": "track",
+      "track_name": "toast and tea",
+      "artist": "the kitchen window",
+      "year": 2025,
+      "dj_intro_text": "the drums in this one... it's just brushes. it feels like the drummer is trying to stay quiet. maybe so they don't wake anyone up in the next room. it's a soft sound... like a secret. i like the way the texture just touches the air. this is the kitchen window. the song is called toast and tea.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/01-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/01-song.mp3"
+    },
+    {
+      "order": 2,
+      "type": "track",
+      "track_name": "the kettle whistles",
+      "artist": "kitchen radio",
+      "year": 2024,
+      "dj_intro_text": "this next one is from kitchen radio... it feels like that specific moment when the sun finally hits the kitchen floor through the curtains. those vibraphone notes have a certain glow to them. soft... a bit blurred at the edges. like everything is finally starting to warm up. the kettle whistles.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/02-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/02-song.mp3"
+    },
+    {
+      "order": 3,
+      "type": "track",
+      "track_name": "blue dishes",
+      "artist": "the kitchen window",
+      "year": 2025,
+      "dj_intro_text": "the light is just hitting the counter now... it's quiet. \"blue dishes\" by the kitchen window. i like how the piano feels here. it isn't trying to be loud... it just stays right there. like it's keeping the whole room steady while everything else drifts a bit. here it is.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/03-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/03-song.mp3"
+    },
+    {
+      "order": 4,
+      "type": "track",
+      "track_name": "saturday's bread",
+      "artist": "small bowl",
+      "year": 2024,
+      "dj_intro_text": "the light is hitting the kitchen counter... that golden, dusty sort of glow. this is small bowl. there's an accordion in here... somehow, it feels like the way a warm loaf of bread smells when it's first pulled out of the oven. a little bit of steam. a lot of comfort. this is saturday’s bread.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/04-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/04-song.mp3"
+    },
+    {
+      "order": 5,
+      "type": "track",
+      "track_name": "sunday paper",
+      "artist": "kitchen radio",
+      "year": 2025,
+      "dj_intro_text": "the tea is almost ready. this is kitchen radio... a track called sunday paper. i like how the mandolin sounds here. it’s like it’s delivering the news, but only the good kind... the small things that happened while we were asleep. it’s a nice way to wake up.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/05-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/05-song.mp3"
+    },
+    {
+      "order": 6,
+      "type": "track",
+      "track_name": "honey on a spoon",
+      "artist": "the kitchen window",
+      "year": 2025,
+      "dj_intro_text": "that flute... it moves so slowly. it has this thick, golden weight to it. like watching honey curl off the edge of a silver spoon before it finally drops. the kitchen window really captured that specific kind of stillness here. it’s called honey on a spoon... let's just listen.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/06-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/06-song.mp3"
+    },
+    {
+      "order": 7,
+      "type": "track",
+      "track_name": "the cat in the window",
+      "artist": "small bowl",
+      "year": 2024,
+      "dj_intro_text": "the light is hitting the floor in that specific way... right where the rug starts. i think this is what it sounds like to be a cat in the sun. no worries, just the warmth on your fur. small bowl captured that feeling of being perfectly content. \"the cat in the window.\" let's listen.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/07-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/07-song.mp3"
+    },
+    {
+      "order": 8,
+      "type": "track",
+      "track_name": "second cup",
+      "artist": "kitchen radio",
+      "year": 2025,
+      "dj_intro_text": "the kettle is just starting to hum... the water isn't quite ready yet. kitchen radio has this track called second cup. that string pad in the background... it feels like pushing a window open just a few inches. just a little bit of fresh air while the house is still asleep.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/08-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/08-song.mp3"
+    },
+    {
+      "order": 9,
+      "type": "track",
+      "track_name": "linen drying",
+      "artist": "the kitchen window",
+      "year": 2025,
+      "dj_intro_text": "that shaker... it's so subtle. reminds me of the way a breeze catches heavy cloth on a line. back and forth. very steady. the kitchen window calls this one linen drying. 2025. it's peaceful. almost like you can feel the air moving through the room. let's listen.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/09-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/09-song.mp3"
+    },
+    {
+      "order": 10,
+      "type": "track",
+      "track_name": "morning radio",
+      "artist": "small bowl",
+      "year": 2024,
+      "dj_intro_text": "i like the way this sounds... it has that heavy tape compression. reminds me of listening to an old am radio in a kitchen that hasn't been updated since the seventies. it’s a bit thin... a bit dusty. but it feels right for right now. small bowl. morning radio.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/10-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/10-song.mp3"
+    },
+    {
+      "order": 11,
+      "type": "track",
+      "track_name": "the cake is in",
+      "artist": "kitchen radio",
+      "year": 2025,
+      "dj_intro_text": "the kitchen is finally getting warm... i like the way this track moves. from kitchen radio. listen for the vibraphone. that’s the cake going into the oven. everything feels a bit lighter after that. a 2025 release. the cake is in. just a soft moment for the afternoon.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/11-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/11-song.mp3"
+    },
+    {
+      "order": 12,
+      "type": "track",
+      "track_name": "afternoon nap",
+      "artist": "the kitchen window",
+      "year": 2026,
+      "dj_intro_text": "the second cup is always the one that does it... that moment when the pages of a book stop turning. just watching the steam. this track by the kitchen window has a quiet, dusty sort of piano... like it’s being played in the room over. just enough to let eyes get heavy. afternoon nap.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/12-dj.mp3",
+      "music_url": "/spaces/sunday-kitchen/2026-05-19/12-song.mp3"
+    },
+    {
+      "order": 13,
+      "type": "outro",
+      "dj_intro_text": "the kettle is quiet now. the kitchen feels still... like it's holding its breath. the light is just starting to hit the floor. i hope you can stay in this feeling for a little while longer. i'll be back next monday. enjoy the rest of your morning. bye for now.",
+      "dj_intro_url": "/spaces/sunday-kitchen/2026-05-19/13-outro.mp3"
+    }
+  ]
+}

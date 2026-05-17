@@ -1,0 +1,114 @@
+{
+  "slug": "bedroom-pop",
+  "week_of": "2026-05-19",
+  "title": "porcelain mornings",
+  "theme": "the light coming back at 6am",
+  "dj": {
+    "name": "Mira",
+    "voice": "en-US-Chirp3-HD-Leda",
+    "speaking_rate": 0.85,
+    "pitch": -1.5,
+    "persona": "a quiet friend at midnight. soft, gentle, patient. lowercase, short sentences, '...' for pauses. notices the smallest texture in each track. never hypes."
+  },
+  "palette": ["#FFB89E", "#A78BC9"],
+  "intro_hint": "introduce the show — bedroom pop, twelve songs, the feeling of the room getting lighter slowly. ~30 seconds spoken.",
+  "outro_hint": "say goodbye softly. mention you'll be back next monday. ~20 seconds spoken.",
+  "tracks": [
+    {
+      "id": "01",
+      "track_name": "porcelain",
+      "artist": "the blue attic",
+      "year": 2026,
+      "music_prompt": "intimate solo felt piano, slow tempo around 65 BPM, in C major, melancholy and patient, with audible room ambience and faint pedal noise. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "notice the room around the piano — the sound of the space, not just the notes"
+    },
+    {
+      "id": "02",
+      "track_name": "paper lamp",
+      "artist": "june lowsky",
+      "year": 2024,
+      "music_prompt": "intimate fingerpicked acoustic guitar in DADGAD open tuning, slow 70 BPM, breath audible, faint tape hiss, melancholic folk style with a hint of warmth. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the open tuning. or the way you can hear the player breathing."
+    },
+    {
+      "id": "03",
+      "track_name": "through the wall",
+      "artist": "small magnolia",
+      "year": 2025,
+      "music_prompt": "dream pop in F major, slow 80 BPM, reverb-soaked clean electric guitar, soft synth pad, breathy female vocals far back in the mix singing wordless 'oohs'. 2 minutes.",
+      "dj_hint": "the vocals are so far back they sound like they're in another room"
+    },
+    {
+      "id": "04",
+      "track_name": "morning small",
+      "artist": "wren and the rain",
+      "year": 2026,
+      "music_prompt": "ambient bedroom pop, very slow, warm analog synth pads slowly swelling in A minor, faint music box melody, no drums. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "this one barely moves. like the light at 6am."
+    },
+    {
+      "id": "05",
+      "track_name": "the long room",
+      "artist": "the blue attic",
+      "year": 2024,
+      "music_prompt": "slowcore in D minor, single distorted electric guitar with long sustain, slow brushed drum kit, soft male vocals murmuring close to the mic. 80 BPM. 2 minutes.",
+      "dj_hint": "the guitar tone. how patient the drums are."
+    },
+    {
+      "id": "06",
+      "track_name": "like a memory",
+      "artist": "amber november",
+      "year": 1973,
+      "music_prompt": "1970s soft rock in G major, warm analog production with tape compression, gentle electric piano, brushed drums, soft female harmonies, mid tempo 95 BPM. 2 minutes.",
+      "dj_hint": "the warmth of analog tape. the harmonies."
+    },
+    {
+      "id": "07",
+      "track_name": "window light",
+      "artist": "joão lyra",
+      "year": 2022,
+      "music_prompt": "bossa nova in A minor, nylon string guitar with brushed snare, walking bass, soft Portuguese male vocals, mid tempo 100 BPM. 2 minutes.",
+      "dj_hint": "the nylon strings. the way the guitar leans back."
+    },
+    {
+      "id": "08",
+      "track_name": "someone's pet",
+      "artist": "small magnolia",
+      "year": 2025,
+      "music_prompt": "lo-fi indie folk, ukulele and harmonium, slow 75 BPM, in G major, sparse, room sound audible, soft female vocals close to the mic singing simple melody. 2 minutes.",
+      "dj_hint": "the harmonium drone underneath. it's grounding the whole thing."
+    },
+    {
+      "id": "09",
+      "track_name": "silk on cold",
+      "artist": "porcelain youth",
+      "year": 2023,
+      "music_prompt": "shoegaze instrumental in E minor, washed-out reverbed electric guitar chords, slow tempo 70 BPM, dreamy and gauzy, long reverb tails. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the chords sound like they're underwater"
+    },
+    {
+      "id": "10",
+      "track_name": "the back garden",
+      "artist": "wren and the rain",
+      "year": 2026,
+      "music_prompt": "slow ambient piece in F# minor at 50 BPM, warm analog synth pad chord progression F#m - A - E - C#m, very gentle electric piano arpeggios on top, no drums. Patient and meditative. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "no rhythm. just air moving."
+    },
+    {
+      "id": "11",
+      "track_name": "for nobody",
+      "artist": "the blue attic",
+      "year": 2024,
+      "music_prompt": "soft jazz piano trio in B-flat major, very slow 60 BPM, brushed drums, upright bass, no vocals. Late night, intimate, recorded close. 2 minutes.",
+      "dj_hint": "the bass is so close you can hear the strings move"
+    },
+    {
+      "id": "12",
+      "track_name": "how it stays",
+      "artist": "small magnolia",
+      "year": 2025,
+      "music_prompt": "dream pop in C major, layered acoustic guitar arpeggios with warm synth pads beneath, mid tempo 90 BPM, soft female vocals close to the mic singing wordless syllables. 2 minutes.",
+      "dj_hint": "the way the synth holds the guitar from below"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "slug": "lofi-study",
+  "week_of": "2026-05-19",
+  "title": "late draft",
+  "theme": "rain on the window, page after page",
+  "dj": {
+    "name": "Yui",
+    "voice": "en-US-Chirp3-HD-Kore",
+    "speaking_rate": 0.87,
+    "pitch": -1.0,
+    "persona": "calm, focused, the friend who keeps you company at the desk. soft, low energy, observant. lowercase, '...' for pauses. notices small textures — the felt of the piano, the dust of the vinyl crackle. never breaks your concentration."
+  },
+  "palette": ["#9FC3E0", "#1A3550"],
+  "intro_hint": "open the room — lofi study, twelve tracks for the next few hours of work. the rain outside, the light on the desk. ~30 seconds.",
+  "outro_hint": "close softly. you'll be back next monday. let the listener get back to whatever they were doing. ~20 seconds.",
+  "tracks": [
+    {
+      "id": "01",
+      "track_name": "late draft",
+      "artist": "midnight stationery",
+      "year": 2025,
+      "music_prompt": "lofi hip hop instrumental at 78 BPM, dusty vinyl crackle, mellow Rhodes piano chords, soft boom-bap drums with brushed snare, gentle bassline. Cozy, warm production. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the vinyl crackle. it sounds like a record from 1995."
+    },
+    {
+      "id": "02",
+      "track_name": "thursday rain",
+      "artist": "felt and paper",
+      "year": 2024,
+      "music_prompt": "lofi chillhop at 75 BPM, soft rainfall in the background, mellow felt piano, slow brushed drums, warm tape saturation. Sparse and patient. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the rain is part of the track. listen for it underneath."
+    },
+    {
+      "id": "03",
+      "track_name": "paper window",
+      "artist": "low desk",
+      "year": 2026,
+      "music_prompt": "ambient piano instrumental, very slow tempo around 60 BPM, single piano with long reverb tails, distant pad swells, faint room ambience. Meditative. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the spaces between the notes do most of the work"
+    },
+    {
+      "id": "04",
+      "track_name": "second draft",
+      "artist": "midnight stationery",
+      "year": 2025,
+      "music_prompt": "jazzy chillhop at 82 BPM, walking upright bass, smooth Rhodes piano, brushed drums, soft trumpet melody. Cozy, late-night atmosphere. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the trumpet line. it's the only thing moving with any urgency."
+    },
+    {
+      "id": "05",
+      "track_name": "desk lamp",
+      "artist": "small lamp records",
+      "year": 2024,
+      "music_prompt": "instrumental beat at 76 BPM in F major, warm analog synth pad, slow boom-bap drum pattern, soft bass, mellow Rhodes piano chords. Faded and dreamy. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the synth pad just sits there, like a warm light"
+    },
+    {
+      "id": "06",
+      "track_name": "between bookmarks",
+      "artist": "low desk",
+      "year": 2026,
+      "music_prompt": "ambient lofi instrumental at 70 BPM, soft Wurlitzer electric piano, very gentle percussive clicks, very subtle drums, warm bass. Patient and quiet. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "barely a drum. it's almost just the Wurlitzer."
+    },
+    {
+      "id": "07",
+      "track_name": "blue notebook",
+      "artist": "felt and paper",
+      "year": 2024,
+      "music_prompt": "lofi chillhop instrumental at 80 BPM, jazzy piano chords in E-flat major, walking bass, brushed drums, warm lo-fi production. Late-night study atmosphere. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the chord changes. they keep turning corners but never go anywhere fast."
+    },
+    {
+      "id": "08",
+      "track_name": "felt rain",
+      "artist": "midnight stationery",
+      "year": 2025,
+      "music_prompt": "lofi piano instrumental at 72 BPM, felt piano (soft hammer felt), gentle rain in the background, no drums, slow reverb-soaked chords. Very intimate. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "felt on hammers. that's why it's so soft."
+    },
+    {
+      "id": "09",
+      "track_name": "study break",
+      "artist": "small lamp records",
+      "year": 2024,
+      "music_prompt": "chillwave lofi at 85 BPM, slow synth arpeggios, warm bass, soft kick and hat pattern, tape saturation. Slightly playful, slightly tired. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "this one has a little bounce. for when you need it."
+    },
+    {
+      "id": "10",
+      "track_name": "library at 11",
+      "artist": "low desk",
+      "year": 2026,
+      "music_prompt": "lofi hip hop instrumental at 78 BPM, soft jazz guitar chords, mellow upright bass, gentle brushed snare, warm low-fidelity production. Library-quiet atmosphere. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the guitar chords. like someone fingerpicking in the next room."
+    },
+    {
+      "id": "11",
+      "track_name": "tea getting cold",
+      "artist": "felt and paper",
+      "year": 2025,
+      "music_prompt": "ambient lofi at 65 BPM, soft pad, very slow brushed drums, gentle Rhodes piano, room ambience. Drowsy and warm. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the room sound. like you can hear the walls."
+    },
+    {
+      "id": "12",
+      "track_name": "last paragraph",
+      "artist": "midnight stationery",
+      "year": 2026,
+      "music_prompt": "lofi chillhop at 75 BPM, smooth Rhodes piano, walking bass, brushed drums, soft synth pad, tape saturation. Reflective and gentle. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "for the last sentence before you close the laptop"
+    }
+  ]
+}

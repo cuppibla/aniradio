@@ -1,0 +1,114 @@
+{
+  "slug": "sunday-kitchen",
+  "week_of": "2026-05-19",
+  "title": "toast and tea",
+  "theme": "the slow part of sunday morning, before anything has to happen",
+  "dj": {
+    "name": "Wren",
+    "voice": "en-US-Chirp3-HD-Zephyr",
+    "speaking_rate": 0.9,
+    "pitch": -0.5,
+    "persona": "warm, conversational, the friend cooking in the next room. comfortable, slightly drowsy, kind. lowercase, '...' for pauses. notices the way light comes through windows, the smell of toast, the sound of a kettle starting to whistle. like she's making something for you too."
+  },
+  "palette": ["#D18A5B", "#5C3A2D"],
+  "intro_hint": "open the room — twelve tracks for sunday morning, the slow part. coffee or tea, depending. the light coming through the window. ~30 seconds.",
+  "outro_hint": "say goodbye softly. you'll be back next monday. enjoy the rest of the morning. ~20 seconds.",
+  "tracks": [
+    {
+      "id": "01",
+      "track_name": "toast and tea",
+      "artist": "the kitchen window",
+      "year": 2025,
+      "music_prompt": "warm acoustic morning music at 95 BPM in G major, fingerpicked steel-string acoustic guitar, soft brushed drums, gentle upright bass. Optimistic but quiet. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the brushes on the drums. like they're trying not to wake anyone up."
+    },
+    {
+      "id": "02",
+      "track_name": "the kettle whistles",
+      "artist": "kitchen radio",
+      "year": 2024,
+      "music_prompt": "bossa nova instrumental at 100 BPM in C major, nylon string guitar, soft brushed drums, walking upright bass, gentle vibraphone. Warm and patient. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the vibraphone. like sun coming through curtains."
+    },
+    {
+      "id": "03",
+      "track_name": "blue dishes",
+      "artist": "the kitchen window",
+      "year": 2025,
+      "music_prompt": "soft jazz piano trio at 90 BPM in F major, gentle piano, brushed drums, walking bass, no vocals. Sunday morning lounge atmosphere. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the piano. it's keeping the whole room steady."
+    },
+    {
+      "id": "04",
+      "track_name": "saturday's bread",
+      "artist": "small bowl",
+      "year": 2024,
+      "music_prompt": "1960s french pop style instrumental at 105 BPM in A minor, accordion, gentle brushed drums, walking bass, soft string section. Warm, slightly bittersweet. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the accordion. that's the smell of fresh bread, somehow."
+    },
+    {
+      "id": "05",
+      "track_name": "sunday paper",
+      "artist": "kitchen radio",
+      "year": 2025,
+      "music_prompt": "warm acoustic folk-pop instrumental at 92 BPM in D major, fingerpicked acoustic steel-string guitar, soft mandolin tremolo, brushed snare, upright bass. Patient and optimistic. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the mandolin. it's the news. but the good kind."
+    },
+    {
+      "id": "06",
+      "track_name": "honey on a spoon",
+      "artist": "the kitchen window",
+      "year": 2025,
+      "music_prompt": "soft bossa nova at 95 BPM in B-flat major, nylon string guitar, brushed drums, walking bass, gentle flute melody. Sweet and slow. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the flute. like honey dripping off a spoon."
+    },
+    {
+      "id": "07",
+      "track_name": "the cat in the window",
+      "artist": "small bowl",
+      "year": 2024,
+      "music_prompt": "lounge jazz instrumental at 88 BPM in E-flat major, gentle vibraphone, brushed drums, walking upright bass, soft piano. Cozy and content. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "this is the cat's song. perfectly content."
+    },
+    {
+      "id": "08",
+      "track_name": "second cup",
+      "artist": "kitchen radio",
+      "year": 2025,
+      "music_prompt": "warm acoustic instrumental at 90 BPM in G major, fingerpicked acoustic guitar, soft brushed drums, gentle bass, slight string pad in the background. Slow and warm. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the string pad. like a window opening just a little."
+    },
+    {
+      "id": "09",
+      "track_name": "linen drying",
+      "artist": "the kitchen window",
+      "year": 2025,
+      "music_prompt": "soft samba instrumental at 110 BPM in F major, nylon guitar, light percussion (shaker and brushes), walking bass, gentle piano chords. Breezy and content. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the shaker. you can almost feel the breeze."
+    },
+    {
+      "id": "10",
+      "track_name": "morning radio",
+      "artist": "small bowl",
+      "year": 2024,
+      "music_prompt": "1960s french lounge instrumental at 100 BPM in C major, accordion, gentle drums, walking bass, soft string section, warm tape compression. Patient and a little nostalgic. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the tape compression. it sounds like an old AM radio."
+    },
+    {
+      "id": "11",
+      "track_name": "the cake is in",
+      "artist": "kitchen radio",
+      "year": 2025,
+      "music_prompt": "lounge jazz instrumental at 95 BPM in A major, piano trio with brushed drums and walking bass, gentle vibraphone solo. Slightly playful, slightly proud. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the vibraphone gets a moment. that's the cake going in."
+    },
+    {
+      "id": "12",
+      "track_name": "afternoon nap",
+      "artist": "the kitchen window",
+      "year": 2026,
+      "music_prompt": "slow acoustic ballad instrumental at 75 BPM in C major, fingerpicked acoustic guitar, soft brushed drums, gentle upright bass, faint string pad. Drowsy and warm. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "this one is for after the second cup. when your eyes get heavy."
+    }
+  ]
+}

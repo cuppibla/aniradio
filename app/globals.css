@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #0f0b0a;
+  color: #e8e0d4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* ambient room glow */
+.room-glow {
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 184, 158, 0.06), transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(167, 139, 201, 0.05), transparent 55%),
+    #0f0b0a;
+}
+
+/* vinyl rotation */
+@keyframes vinyl-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.vinyl-spinning {
+  animation: vinyl-spin 1.8s linear infinite;
+}
+.vinyl-slow {
+  animation: vinyl-spin 24s linear infinite;
+}
+
+/* mira orb breathing */
+@keyframes orb-breathe {
+  0%, 100% { transform: scale(1); filter: blur(20px) brightness(1); }
+  50% { transform: scale(1.06); filter: blur(22px) brightness(1.12); }
+}
+.orb-breathing {
+  animation: orb-breathe 5s ease-in-out infinite;
+}
+
+@keyframes orb-pulse {
+  0%, 100% { transform: scale(1.0); filter: blur(28px) brightness(1.15); }
+  50% { transform: scale(1.08); filter: blur(34px) brightness(1.35); }
+}
+.orb-speaking {
+  animation: orb-pulse 2.8s ease-in-out infinite;
+}
+
+/* shimmer for vinyl reflection */
+@keyframes shimmer-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.vinyl-shimmer {
+  animation: shimmer-rotate 14s linear infinite;
+}
+
+/* fade utilities */
+.fade-soft {
+  transition: opacity 1.2s ease, transform 1.2s ease, filter 1.2s ease;
+}
+
+.fade-fast {
+  transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
+}
+
+/* progress dot */
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(232, 224, 212, 0.18);
+  transition: background 0.6s ease, transform 0.6s ease;
+}
+.dot.active {
+  background: #e8e0d4;
+  transform: scale(1.3);
+}
+.dot.played {
+  background: rgba(232, 224, 212, 0.55);
+}
+
+/* track info enter */
+@keyframes soft-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.soft-rise {
+  animation: soft-rise 1.4s ease-out;
+}
+
+/* subtle vinyl crackle visualization (not audio) */
+@keyframes crackle {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.07; }
+}
+.crackle {
+  animation: crackle 0.3s linear infinite;
+}

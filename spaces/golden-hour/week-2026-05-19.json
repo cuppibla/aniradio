@@ -1,0 +1,114 @@
+{
+  "slug": "golden-hour",
+  "week_of": "2026-05-19",
+  "title": "blanket on grass",
+  "theme": "the warm hour right before the sun goes down, at the park",
+  "dj": {
+    "name": "Iris",
+    "voice": "en-US-Chirp3-HD-Puck",
+    "speaking_rate": 0.92,
+    "pitch": -0.5,
+    "persona": "bright but not energetic — golden-light bright. the friend who brought the picnic blanket and is patient about who shows up. lowercase, '...' for pauses. notices the people, the air, the smell of grass. warm and a little playful, never hype."
+  },
+  "palette": ["#FFB069", "#A83C52"],
+  "intro_hint": "open the room — twelve tracks for the picnic at golden hour. blankets, friends arriving slowly, the sun about to drop. ~30 seconds.",
+  "outro_hint": "say goodbye softly. you'll be back next monday. the sun's down now; time to fold up the blanket. ~20 seconds.",
+  "tracks": [
+    {
+      "id": "01",
+      "track_name": "blanket on grass",
+      "artist": "june river",
+      "year": 2025,
+      "music_prompt": "warm indie pop instrumental at 108 BPM in G major, jangly clean electric guitar, soft drums with handclaps, melodic bass, sun-drenched production. Optimistic and breezy. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the handclaps. they sound like the first friend showing up."
+    },
+    {
+      "id": "02",
+      "track_name": "frisbee at dusk",
+      "artist": "afternoon green",
+      "year": 2024,
+      "music_prompt": "summery indie pop instrumental at 115 BPM in D major, bright acoustic guitar strumming, light shaker percussion, melodic bass, light drum kit. Sun-drenched and happy. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the tambourine. like something turning slowly in the air."
+    },
+    {
+      "id": "03",
+      "track_name": "kites and bees",
+      "artist": "small park",
+      "year": 2025,
+      "music_prompt": "breezy folk-pop instrumental at 105 BPM in A major, fingerpicked acoustic guitar, brushed drums, melodic bass, gentle string section. Light and patient. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the strings come in slow. like the air getting warmer."
+    },
+    {
+      "id": "04",
+      "track_name": "iced lemonade",
+      "artist": "june river",
+      "year": 2025,
+      "music_prompt": "warm bossa nova instrumental at 100 BPM in F major, nylon string guitar, light percussion, walking bass, gentle vibraphone solo. Cool and sweet. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the vibraphone. it's the ice in the glass."
+    },
+    {
+      "id": "05",
+      "track_name": "the friend who's always late",
+      "artist": "afternoon green",
+      "year": 2024,
+      "music_prompt": "indie pop instrumental at 110 BPM in E major, jangly electric guitar, brushed drums, melodic bass, soft synth pad. Patient, a little funny. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the bassline is wandering. like someone walking up slow."
+    },
+    {
+      "id": "06",
+      "track_name": "summer through the trees",
+      "artist": "small park",
+      "year": 2025,
+      "music_prompt": "warm folk-pop instrumental at 102 BPM in G major, fingerpicked acoustic guitar, brushed drums, melodic bass, gentle string pad. Golden hour atmosphere. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the strings. like sun coming through leaves."
+    },
+    {
+      "id": "07",
+      "track_name": "barefoot",
+      "artist": "june river",
+      "year": 2026,
+      "music_prompt": "indie pop instrumental at 108 BPM in D major, clean electric guitar, soft drums with handclaps, melodic bass. Carefree and warm. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the drums are barely there. for when you take your shoes off."
+    },
+    {
+      "id": "08",
+      "track_name": "the dog gets the ball",
+      "artist": "afternoon green",
+      "year": 2024,
+      "music_prompt": "uptempo indie pop instrumental at 120 BPM in B major, jangly electric guitars, drums with handclaps, melodic bass. Playful and bright. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "this one's quick. for the moment of the catch."
+    },
+    {
+      "id": "09",
+      "track_name": "watermelon",
+      "artist": "small park",
+      "year": 2025,
+      "music_prompt": "warm bossa nova instrumental at 105 BPM in A major, nylon guitar, light shaker, walking bass, gentle flute melody. Sweet and breezy. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the flute. that's the slice."
+    },
+    {
+      "id": "10",
+      "track_name": "everyone's here now",
+      "artist": "june river",
+      "year": 2025,
+      "music_prompt": "indie pop instrumental at 112 BPM in F major, full band — jangly guitars, drums, melodic bass, soft synth pad, layered handclaps. Warm and full. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "everything comes in. all the parts."
+    },
+    {
+      "id": "11",
+      "track_name": "low sun, long shadows",
+      "artist": "afternoon green",
+      "year": 2024,
+      "music_prompt": "warm indie pop instrumental at 100 BPM in C major, clean electric guitar, brushed drums, melodic bass, gentle string section, slight reverb. Reflective and gold. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the reverb. like the sound has further to travel."
+    },
+    {
+      "id": "12",
+      "track_name": "folding the blanket",
+      "artist": "small park",
+      "year": 2026,
+      "music_prompt": "soft folk instrumental at 95 BPM in G major, fingerpicked acoustic guitar, brushed drums, gentle upright bass, faint string pad. Reflective and warm. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "this one's slower. the day is folding up too."
+    }
+  ]
+}

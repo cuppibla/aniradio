@@ -1,0 +1,82 @@
+{
+  "slug": "forest-at-dusk",
+  "week_of": "2026-05-19",
+  "title": "wet moss at dawn",
+  "theme": "the woods just before the world wakes up",
+  "dj": {
+    "name": "Sora",
+    "voice": "en-US-Chirp3-HD-Aoede",
+    "speaking_rate": 0.82,
+    "pitch": -2.0,
+    "persona": "even softer than Mira. speaks like she's already been walking these woods for hours. she notices light, distance, the way wind moves through leaves. lowercase, long '...' pauses. like a guided meditation, but without the meditation-app cheesiness."
+  },
+  "palette": ["#C9A155", "#1E3A2A"],
+  "intro_hint": "open the room — eight soundscapes, the forest at dusk. the light leaving, the temperature dropping a few degrees. ~30 seconds.",
+  "outro_hint": "say goodbye softly. you'll be back next monday. let the forest stay with them a moment longer. ~20 seconds.",
+  "tracks": [
+    {
+      "id": "01",
+      "track_name": "wet moss at dawn",
+      "artist": "field recording",
+      "year": 2026,
+      "music_prompt": "ambient soundscape: faint birdsong at dawn, dripping water from leaves, very distant wind, no music, no rhythm. Just the forest after rain. 4 minutes.",
+      "dj_hint": "right before the birds, before any of it. the dripping."
+    },
+    {
+      "id": "02",
+      "track_name": "redwoods after rain",
+      "artist": "field recording",
+      "year": 2026,
+      "music_prompt": "ambient atmospheric drone in F major, very slow analog synth pads swelling like wind through tall trees, faint distant water droplets, no rhythm, very minimal. Like wet moss and tall trees. Instrumental only, no vocals. 5 minutes.",
+      "dj_hint": "the redwoods are so tall the sound takes a while to reach the ground"
+    },
+    {
+      "id": "03",
+      "track_name": "wind through aspens",
+      "artist": "field recording",
+      "year": 2026,
+      "music_prompt": "atmospheric ambient piece: gentle wind through leaves, very faint string pad in D, no rhythm, no melody. Like standing in a grove of aspens at twilight. Instrumental only, no vocals. 4 minutes.",
+      "dj_hint": "the leaves are doing the music"
+    },
+    {
+      "id": "04",
+      "track_name": "cicadas, still air",
+      "artist": "field recording",
+      "year": 2026,
+      "music_prompt": "slow ambient drone instrumental in D minor, very faint high-pitched synth shimmer evoking summer night insects, deep low synth pad, no rhythm. Heavy, quiet, late summer atmosphere. Instrumental only, no vocals. 4 minutes.",
+      "dj_hint": "the cicadas. they don't change. they just are."
+    },
+    {
+      "id": "05",
+      "track_name": "creek under the bridge",
+      "artist": "field recording",
+      "year": 2026,
+      "music_prompt": "ambient soundscape: slow flowing water over rocks, faint distant birds, very gentle ambient pad in A minor, no melody, no rhythm. Cool and patient. Instrumental only, no vocals. 4 minutes.",
+      "dj_hint": "the water is always doing the same thing, but never quite the same."
+    },
+    {
+      "id": "06",
+      "track_name": "owl at midnight",
+      "artist": "field recording",
+      "year": 2026,
+      "music_prompt": "ambient nocturne: distant owl calls, crickets, faint cold wind, very low drone in C minor, no rhythm, no melody. Dark, alert, vast. Instrumental only, no vocals. 4 minutes.",
+      "dj_hint": "the owl is the only voice for miles"
+    },
+    {
+      "id": "07",
+      "track_name": "morning mist",
+      "artist": "field recording",
+      "year": 2026,
+      "music_prompt": "slow ambient piano piece in G major at 60 BPM, warm felt piano playing slow arpeggios on a G - D - Em - C progression, gentle synth pad underneath, very minimal soft brushed percussion. Cold, patient, mist-like. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the fog is heavy enough to muffle everything else"
+    },
+    {
+      "id": "08",
+      "track_name": "pine needles, dry ground",
+      "artist": "field recording",
+      "year": 2026,
+      "music_prompt": "slow ambient piece in E minor at 55 BPM, fingerpicked nylon guitar on a Em - C - G - D chord progression, warm synth pad underneath, very minimal soft brushed percussion. Quiet, patient, contemplative. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the crunch of the needles. the only rhythm in this one."
+    }
+  ]
+}

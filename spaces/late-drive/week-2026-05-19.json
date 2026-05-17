@@ -1,0 +1,114 @@
+{
+  "slug": "late-drive",
+  "week_of": "2026-05-19",
+  "title": "tail lights ahead",
+  "theme": "the freeway at 2am, almost nobody on it",
+  "dj": {
+    "name": "Theo",
+    "voice": "en-US-Chirp3-HD-Charon",
+    "speaking_rate": 0.88,
+    "pitch": -1.0,
+    "persona": "the only voice on the radio after 2am. deep, calm, not too cool. notices the road, the light, the rear-view. lowercase, '...' for pauses. no DJ posturing. like a friend in the passenger seat who knows when to be quiet."
+  },
+  "palette": ["#FF3DA8", "#1A0A3A"],
+  "intro_hint": "open the room — twelve tracks for the freeway after midnight. neon, tail lights, very few other cars. ~30 seconds.",
+  "outro_hint": "say goodnight softly. you'll be back next monday. the sun's about to come up; the show is over. ~20 seconds.",
+  "tracks": [
+    {
+      "id": "01",
+      "track_name": "red lights",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "music_prompt": "synthwave instrumental at 95 BPM in A minor, gated reverb drums, analog synth bass, slow lead synth melody, atmospheric pad. Nighttime, neon, slightly melancholic. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the gated reverb on the drums. that's the 80s sound, right there."
+    },
+    {
+      "id": "02",
+      "track_name": "tail lights ahead",
+      "artist": "neon overpass",
+      "year": 2025,
+      "music_prompt": "outrun electronic instrumental at 100 BPM, arpeggiated bright synths, punchy drum machine, deep sub bass, atmospheric pad. Driving, hypnotic. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the arpeggios. they sound like passing lane stripes."
+    },
+    {
+      "id": "03",
+      "track_name": "nobody on the 405",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "music_prompt": "chillwave instrumental at 90 BPM in D minor, slow synth pads, lo-fi drum machine, warm bass, distant lead synth. Cruising, no hurry. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the empty lanes. you can hear it."
+    },
+    {
+      "id": "04",
+      "track_name": "neon underpass",
+      "artist": "violet exit",
+      "year": 2024,
+      "music_prompt": "darksynth instrumental at 105 BPM in E minor, deep saw bass, punchy gated drums, atmospheric synth pads, occasional lead synth stab. Moody, urban. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the bass. you can feel it in the steering wheel."
+    },
+    {
+      "id": "05",
+      "track_name": "exit 14",
+      "artist": "neon overpass",
+      "year": 2025,
+      "music_prompt": "synthwave instrumental at 95 BPM in F# minor, mellow synth pad, slow drum machine, walking analog bass, melodic synth lead. Reflective. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the lead synth. it sounds like an exit sign in the distance."
+    },
+    {
+      "id": "06",
+      "track_name": "wet asphalt",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "music_prompt": "chillwave instrumental at 88 BPM in C minor, atmospheric reverb-drenched synth pads, slow drum machine pattern, deep analog bass. Late-night, slow, beautiful. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the reverb. like the road just after rain."
+    },
+    {
+      "id": "07",
+      "track_name": "speed limit",
+      "artist": "violet exit",
+      "year": 2024,
+      "music_prompt": "outrun instrumental at 110 BPM in B minor, arpeggiated synth lead, punchy drum machine, deep sub bass, driving rhythm. Forward motion, no looking back. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "this one wants to go faster than you should"
+    },
+    {
+      "id": "08",
+      "track_name": "rest stop",
+      "artist": "neon overpass",
+      "year": 2025,
+      "music_prompt": "slow ambient synthwave instrumental at 80 BPM in A minor, atmospheric synth pads, very minimal drum machine, deep sustained bass, distant synth lead melody. Reflective and patient. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the drums almost stop. for when you pull over for coffee."
+    },
+    {
+      "id": "09",
+      "track_name": "headlight glare",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "music_prompt": "darksynth instrumental at 100 BPM in D minor, bright lead synth, punchy gated drums, deep bass, atmospheric pad with vocoder texture. Intense and beautiful. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the lead synth is bright like an oncoming high beam"
+    },
+    {
+      "id": "10",
+      "track_name": "blue mile marker",
+      "artist": "violet exit",
+      "year": 2024,
+      "music_prompt": "chillwave instrumental at 92 BPM in G minor, dreamy synth pads, mellow drum machine, warm analog bass, slow lead melody. Late night, miles from anywhere. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the pad behind everything. it doesn't change."
+    },
+    {
+      "id": "11",
+      "track_name": "two more exits",
+      "artist": "neon overpass",
+      "year": 2025,
+      "music_prompt": "synthwave instrumental at 98 BPM in E-flat minor, melodic synth lead, mid-tempo drum machine, deep bass, atmospheric synth chords. Almost home. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "the chords resolve. finally."
+    },
+    {
+      "id": "12",
+      "track_name": "before sunrise",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "music_prompt": "ambient synthwave at 85 BPM in C major, slow warm synth pads, gentle drum machine, deep bass, melancholic lead synth. The sky starting to turn. Instrumental only, no vocals. 2 minutes.",
+      "dj_hint": "it's in a major key. that's the sky changing."
+    }
+  ]
+}

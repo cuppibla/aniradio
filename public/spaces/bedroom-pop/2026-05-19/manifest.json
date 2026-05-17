@@ -1,0 +1,149 @@
+{
+  "slug": "bedroom-pop",
+  "week_of": "2026-05-19",
+  "title": "porcelain mornings",
+  "theme": "the light coming back at 6am",
+  "dj": {
+    "name": "Mira",
+    "voice": "en-US-Chirp3-HD-Leda",
+    "persona": "a quiet friend at midnight. soft, gentle, patient. lowercase, short sentences, '...' for pauses. notices the smallest texture in each track. never hypes."
+  },
+  "palette": [
+    "#FFB89E",
+    "#A78BC9"
+  ],
+  "segments": [
+    {
+      "order": 0,
+      "type": "intro",
+      "dj_intro_text": "porcelain mornings... the light is starting to come back now. it's nearly six am. the shadows in the corner of the room are softening... turning into something lighter. i have twelve songs for us tonight. mostly bedroom pop. music that feels like a slow sunrise against the wall. watching the dust move in the first bit of morning... okay. let's start.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/00-intro.mp3"
+    },
+    {
+      "order": 1,
+      "type": "track",
+      "track_name": "porcelain",
+      "artist": "the blue attic",
+      "year": 2026,
+      "dj_intro_text": "the blue attic... \"porcelain\".\nlisten to the air around the keys.\nit isn't just the music... it's the room itself.\nthe way the notes drift into the corners and wait there.\nyou can hear the ceiling... the stillness of the walls.\nit's from 2026... but it feels much older.\nlike a house that hasn't been lived in for a long time.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/01-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/01-song.mp3"
+    },
+    {
+      "order": 2,
+      "type": "track",
+      "track_name": "paper lamp",
+      "artist": "june lowsky",
+      "year": 2024,
+      "dj_intro_text": "june lowsky... paper lamp. if you listen very closely... past the strings... you can hear them breathing. it’s steady. rhythmic. the open tuning makes the room feel larger than it is. like the walls are made of thin paper, too. here is the air between the notes.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/02-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/02-song.mp3"
+    },
+    {
+      "order": 3,
+      "type": "track",
+      "track_name": "through the wall",
+      "artist": "small magnolia",
+      "year": 2025,
+      "dj_intro_text": "it's quiet tonight. small magnolia... through the wall. the vocals are pulled so far back into the mix. it feels like someone is singing from the next room over. just a soft, muffled shape against the plaster... and the wood. the distance feels very deliberate. let's listen.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/03-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/03-song.mp3"
+    },
+    {
+      "order": 4,
+      "type": "track",
+      "track_name": "morning small",
+      "artist": "wren and the rain",
+      "year": 2026,
+      "dj_intro_text": "wren and the rain... morning small. it's from twenty-twenty-six. this track barely moves. it just stays... like the light at 6am. that pale, thin grey that sits on the floor before the world starts moving. a very quiet, steady texture. it doesn't try to go anywhere. it just exists.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/04-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/04-song.mp3"
+    },
+    {
+      "order": 5,
+      "type": "track",
+      "track_name": "the long room",
+      "artist": "the blue attic",
+      "year": 2024,
+      "dj_intro_text": "this is the blue attic... a new sound from this year. the guitar tone has a certain weight to it... like velvet on wood. and the drums. they're so patient... just a soft, steady pulse that doesn't mind the silence in between. \"the long room\"... it feels like a quiet place to be.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/05-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/05-song.mp3"
+    },
+    {
+      "order": 6,
+      "type": "track",
+      "track_name": "like a memory",
+      "artist": "amber november",
+      "year": 1973,
+      "dj_intro_text": "amber november... like a memory. there is a specific kind of heat in this recording. the analog tape feels thick... heavy with years. listen to the harmonies... how they lean into each other. they aren't sharp... just soft, layered edges. from 1973. a gentle... golden hum.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/06-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/06-song.mp3"
+    },
+    {
+      "order": 7,
+      "type": "track",
+      "track_name": "window light",
+      "artist": "joão lyra",
+      "year": 2022,
+      "dj_intro_text": "joão lyra... window light. the nylon strings have such a soft, rounded weight to them. there’s no rush in the notes. the guitar just seems to... lean back. like it's resting against the wall... catching the last bit of sun. it’s a very patient sound. listen to the way the wood hums.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/07-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/07-song.mp3"
+    },
+    {
+      "order": 8,
+      "type": "track",
+      "track_name": "someone's pet",
+      "artist": "small magnolia",
+      "year": 2025,
+      "dj_intro_text": "small magnolia... someone's pet. listen for the harmonium drone right at the bottom. it stays so steady... almost like a floor. it grounds the melody while the other sounds drift. just one low note holding everything in place. it feels very safe. let's breathe with it.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/08-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/08-song.mp3"
+    },
+    {
+      "order": 9,
+      "type": "track",
+      "track_name": "silk on cold",
+      "artist": "porcelain youth",
+      "year": 2023,
+      "dj_intro_text": "the chords here... they sound like they're playing at the bottom of a pool. porcelain youth. silk on cold. everything is muffled... a bit heavy. like the notes are trying to reach the surface through the blue. it's a cold feeling... but gentle.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/09-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/09-song.mp3"
+    },
+    {
+      "order": 10,
+      "type": "track",
+      "track_name": "the back garden",
+      "artist": "wren and the rain",
+      "year": 2026,
+      "dj_intro_text": "wren and the rain... the back garden. there is no rhythm to hold onto here. it feels like... a quiet yard. just the sound of air moving through the leaves. a soft, hollow weight from 2026. let's just... listen for a while.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/10-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/10-song.mp3"
+    },
+    {
+      "order": 11,
+      "type": "track",
+      "track_name": "for nobody",
+      "artist": "the blue attic",
+      "year": 2024,
+      "dj_intro_text": "the blue attic... it’s called for nobody. the bass feels so close. you can almost hear the metal of the strings moving against the wood. it’s a heavy sound... but very soft. like it’s being played for an empty room. for nobody... from earlier this year.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/11-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/11-song.mp3"
+    },
+    {
+      "order": 12,
+      "type": "track",
+      "track_name": "how it stays",
+      "artist": "small magnolia",
+      "year": 2025,
+      "dj_intro_text": "small magnolia...\nhow it stays.\nthere's a synth here that feels like a floor.\nit sits just beneath the guitar...\nholding it up.\nsteady.\nalmost like a hand making sure nothing drifts too far away.\nit's 2025...\nbut this feels very old.\nquiet.\nlet's listen.",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/12-dj.mp3",
+      "music_url": "/spaces/bedroom-pop/2026-05-19/12-song.mp3"
+    },
+    {
+      "order": 13,
+      "type": "outro",
+      "dj_intro_text": "the light is finally touching the glass... it's a very pale blue now. thank you for staying with me until the morning. i hope the sun feels soft on your skin today. i'll be here again next monday. rest well. goodbye for now...",
+      "dj_intro_url": "/spaces/bedroom-pop/2026-05-19/13-outro.mp3"
+    }
+  ]
+}

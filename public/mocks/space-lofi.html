@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>aniradio · lofi study</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root {
+    --ink: #d8e6f0;
+    --ink-soft: #d8e6f0aa;
+    --ink-faint: #d8e6f055;
+    --warm: #ffcf8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #0a1320;
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* the room itself */
+  .room {
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse at 90% 90%, rgba(255,207,138,0.08) 0%, transparent 35%),
+      radial-gradient(ellipse at 15% 10%, rgba(120,160,200,0.1) 0%, transparent 45%),
+      linear-gradient(160deg, #1a3550 0%, #0c1a2a 70%, #060e18 100%);
+  }
+
+  /* rain */
+  .rain { position: absolute; inset: 0; pointer-events: none; opacity: 0.4; }
+  .rain::before, .rain::after {
+    content: "";
+    position: absolute; inset: -40px;
+    background-image: repeating-linear-gradient(
+      72deg,
+      transparent 0 40px,
+      rgba(159,195,224,0.25) 40px 41px,
+      transparent 41px 60px
+    );
+    animation: fall 0.9s linear infinite;
+  }
+  .rain::after { animation-duration: 1.4s; opacity: 0.55; background-size: 200px 200px; }
+  @keyframes fall { from { transform: translateY(-60px); } to { transform: translateY(60px); } }
+
+  /* a soft window glow on the far right wall */
+  .window-glow {
+    position: absolute;
+    top: 8%; right: 6%;
+    width: 22%; height: 60%;
+    background: linear-gradient(
+      135deg,
+      rgba(255,225,180,0.18) 0%,
+      rgba(255,225,180,0.08) 50%,
+      transparent 100%
+    );
+    border-radius: 4px;
+    filter: blur(20px);
+  }
+
+  /* header */
+  header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 32px;
+  }
+  .back {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-faint);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .back:hover { color: var(--ink); }
+  .room-title {
+    text-align: center;
+  }
+  .room-title h1 {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+  }
+  .room-title .dj-name {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-top: 4px;
+  }
+  .room-time {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+  }
+
+  /* the stage */
+  .stage {
+    position: relative;
+    z-index: 5;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* cassette tape */
+  .cassette {
+    position: relative;
+    width: 520px;
+    aspect-ratio: 8/5;
+    background: linear-gradient(135deg, #2a3d52 0%, #1a2838 50%, #14202e 100%);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow:
+      0 20px 60px rgba(0,0,0,0.6),
+      0 0 0 1px rgba(255,255,255,0.04),
+      inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+  .cassette::before { /* label panel */
+    content: "";
+    position: absolute;
+    top: 8%; left: 8%; right: 8%; height: 30%;
+    background: linear-gradient(90deg, #e8d8b8 0%, #d8c5a0 100%);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -1px 0 rgba(0,0,0,0.15);
+  }
+  .cassette-label {
+    position: absolute;
+    top: 11%; left: 11%; right: 11%; height: 24%;
+    color: #4a3a28;
+    z-index: 2;
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cassette-label .side {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .cassette-label .song {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+  }
+  .cassette-label .meta-row {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    opacity: 0.55;
+  }
+
+  /* the two reels */
+  .reel {
+    position: absolute;
+    bottom: 14%;
+    width: 22%; aspect-ratio: 1;
+    border-radius: 999px;
+    background: radial-gradient(circle, #0a1320 0%, #060c14 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    animation: spin 4.5s linear infinite;
+  }
+  .reel.left  { left: 14%; }
+  .reel.right { right: 14%; }
+  .reel::before { /* hub */
+    content: "";
+    position: absolute;
+    inset: 38%;
+    border-radius: 999px;
+    background: #9fc3e0;
+    opacity: 0.5;
+  }
+  .reel::after { /* spokes — visible because we made the hub thick */
+    content: "";
+    position: absolute;
+    inset: 42%;
+    border-radius: 999px;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg, rgba(0,0,0,0.4) 5deg, transparent 10deg,
+      transparent 90deg, rgba(0,0,0,0.4) 95deg, transparent 100deg,
+      transparent 180deg, rgba(0,0,0,0.4) 185deg, transparent 190deg,
+      transparent 270deg, rgba(0,0,0,0.4) 275deg, transparent 280deg
+    );
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* small window in cassette body showing tape moving between reels */
+  .tape-window {
+    position: absolute;
+    bottom: 28%; left: 50%; transform: translateX(-50%);
+    width: 38%; height: 4px;
+    background: #14202e;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  .tape-window::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(90deg, transparent 0 6px, rgba(255,255,255,0.25) 6px 7px);
+    animation: tape 0.6s linear infinite;
+  }
+  @keyframes tape { to { transform: translateX(7px); } }
+
+  /* DJ Yui's "presence" — a warm desk-lamp glow in the bottom right */
+  .yui {
+    position: absolute;
+    bottom: 6%; right: 6%;
+    width: 140px; height: 140px;
+    z-index: 10;
+  }
+  .yui-glow {
+    position: absolute; inset: 0;
+    border-radius: 999px;
+    background: radial-gradient(
+      circle at 50% 45%,
+      rgba(255,215,140,0.9) 0%,
+      rgba(255,180,120,0.5) 30%,
+      rgba(220,140,180,0.3) 55%,
+      transparent 75%
+    );
+    filter: blur(8px);
+    animation: yui-breathe 3s ease-in-out infinite;
+  }
+  @keyframes yui-breathe {
+    0%, 100% { transform: scale(1); opacity: 0.85; }
+    50% { transform: scale(1.06); opacity: 1; }
+  }
+  .yui-core {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 32px; height: 32px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #fff2d6 0%, #ffb86a 60%, transparent 80%);
+    border-radius: 999px;
+    filter: blur(3px);
+  }
+  .yui-label {
+    position: absolute;
+    bottom: -20px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: rgba(255,215,140,0.6);
+    white-space: nowrap;
+  }
+
+  /* bottom info bar */
+  .info-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 10;
+    padding: 26px 32px 30px;
+    background: linear-gradient(to top, rgba(6,14,24,0.85) 0%, transparent 100%);
+  }
+  .ticker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-faint);
+    margin-bottom: 12px;
+  }
+  .ticker .pulse {
+    width: 6px; height: 6px;
+    border-radius: 999px;
+    background: var(--warm);
+    box-shadow: 0 0 8px rgba(255,207,138,0.8);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+  .ticker .next {
+    margin-left: auto;
+    color: var(--ink-faint);
+  }
+  .track-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .track-title {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .track-by {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .controls {
+    display: flex;
+    gap: 8px;
+  }
+  .ctrl {
+    width: 38px; height: 38px;
+    border-radius: 999px;
+    border: 1px solid rgba(216,230,240,0.18);
+    background: transparent;
+    color: var(--ink-soft);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s ease;
+  }
+  .ctrl:hover { border-color: var(--ink-soft); color: var(--ink); }
+  .ctrl svg { display: block; }
+
+  /* DJ talking caption — appears only while DJ is speaking */
+  .dj-caption {
+    position: absolute;
+    bottom: 110px; left: 50%;
+    transform: translateX(-50%);
+    max-width: 480px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    font-style: italic;
+    opacity: 0.9;
+  }
+  .dj-caption::before, .dj-caption::after {
+    content: "“";
+    font-family: ui-serif, Georgia, serif;
+    font-size: 24px;
+    color: var(--warm);
+    opacity: 0.5;
+    vertical-align: -4px;
+    margin: 0 4px;
+  }
+  .dj-caption::after { content: "”"; }
+</style>
+</head>
+<body>
+
+<div class="room">
+  <div class="window-glow"></div>
+  <div class="rain"></div>
+
+  <header>
+    <a href="lobby.html" class="back">← leave room</a>
+    <div class="room-title">
+      <h1>lofi study · cool blue</h1>
+      <div class="dj-name">with Yui</div>
+    </div>
+    <div class="room-time">tuesday · 11:42 pm</div>
+  </header>
+
+  <div class="stage">
+    <div class="cassette">
+      <div class="cassette-label">
+        <div class="side">side b · ch.07</div>
+        <div class="song">late draft</div>
+        <div class="meta-row">yui · 02:14 of 04:08</div>
+      </div>
+      <div class="tape-window"></div>
+      <div class="reel left"></div>
+      <div class="reel right"></div>
+    </div>
+  </div>
+
+  <div class="yui">
+    <div class="yui-glow"></div>
+    <div class="yui-core"></div>
+    <div class="yui-label">Yui</div>
+  </div>
+
+  <div class="info-bar">
+    <div class="ticker">
+      <span class="pulse"></span>
+      <span>now playing · track 9 of ∞ · channel mode</span>
+      <span class="next">next: paper window · then: thursday rain</span>
+    </div>
+    <div class="track-row">
+      <div>
+        <div class="track-title">late draft</div>
+        <div class="track-by">midnight stationery · 2026</div>
+      </div>
+      <div class="controls">
+        <button class="ctrl" aria-label="pause">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <rect x="2.5" y="2" width="2.5" height="8" rx="0.5"/>
+            <rect x="7" y="2" width="2.5" height="8" rx="0.5"/>
+          </svg>
+        </button>
+        <button class="ctrl" aria-label="skip">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <path d="M2 2v8l5-4-5-4zm6 0v8h2V2H8z"/>
+          </svg>
+        </button>
+        <button class="ctrl" aria-label="info">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="6" cy="6" r="4.5"/>
+            <line x1="6" y1="5" x2="6" y2="9"/>
+            <circle cx="6" cy="3.5" r="0.4" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

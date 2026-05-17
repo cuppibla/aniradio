@@ -1,0 +1,149 @@
+{
+  "slug": "golden-hour",
+  "week_of": "2026-05-19",
+  "title": "blanket on grass",
+  "theme": "the warm hour right before the sun goes down, at the park",
+  "dj": {
+    "name": "Iris",
+    "voice": "en-US-Chirp3-HD-Puck",
+    "persona": "bright but not energetic — golden-light bright. the friend who brought the picnic blanket and is patient about who shows up. lowercase, '...' for pauses. notices the people, the air, the smell of grass. warm and a little playful, never hype."
+  },
+  "palette": [
+    "#FFB069",
+    "#A83C52"
+  ],
+  "segments": [
+    {
+      "order": 0,
+      "type": "intro",
+      "dj_intro_text": "blanket on grass. the sun is getting heavy... that warm, orange weight right before it drops. it's quiet here. i've spread the blanket out... there's plenty of space. i can see a few of you coming across the field now. we have twelve tracks to keep us company while the light fades. it feels good to just... wait. okay. let's start.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/00-intro.mp3"
+    },
+    {
+      "order": 1,
+      "type": "track",
+      "track_name": "blanket on grass",
+      "artist": "june river",
+      "year": 2025,
+      "dj_intro_text": "blanket on grass... hello. i'm iris. june river has a song with the same name as our little space. listen for the handclaps. they're light. they remind me of the first friend finally showing up to the park... that first hello while the sun is still high. june river. \"blanket on grass\".",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/01-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/01-song.mp3"
+    },
+    {
+      "order": 2,
+      "type": "track",
+      "track_name": "frisbee at dusk",
+      "artist": "afternoon green",
+      "year": 2024,
+      "dj_intro_text": "afternoon green... frisbee at dusk. listen for the tambourine. it has this weightless quality... like something circular turning slowly through the air. the way a plastic disc catches the last bit of sun before it drops. it's from 2024, but the sound feels like a very long afternoon... finally ending.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/02-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/02-song.mp3"
+    },
+    {
+      "order": 3,
+      "type": "track",
+      "track_name": "kites and bees",
+      "artist": "small park",
+      "year": 2025,
+      "dj_intro_text": "small park. the strings come in so slowly... like the air getting warmer when the clouds finally move. it's called \"kites and bees.\" i like how the melody just floats there. it doesn't seem to be in any rush to get anywhere. just drifting...",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/03-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/03-song.mp3"
+    },
+    {
+      "order": 4,
+      "type": "track",
+      "track_name": "iced lemonade",
+      "artist": "june river",
+      "year": 2025,
+      "dj_intro_text": "the sun is right above us now... i think i can hear the ice clicking against the glass. june river has this way with the vibraphone... it sounds cold and clear... like it was just pulled from the freezer. iced lemonade. let's listen to the condensation on the side.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/04-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/04-song.mp3"
+    },
+    {
+      "order": 5,
+      "type": "track",
+      "track_name": "the friend who's always late",
+      "artist": "afternoon green",
+      "year": 2024,
+      "dj_intro_text": "the title is a bit of a giveaway... afternoon green. the friend who's always late. notice the bass... it's just wandering. no real rush. like someone taking the long way through the park... checking every flower along the path. we're just waiting here on the grass for them. it's okay. no hurry.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/05-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/05-song.mp3"
+    },
+    {
+      "order": 6,
+      "type": "track",
+      "track_name": "summer through the trees",
+      "artist": "small park",
+      "year": 2025,
+      "dj_intro_text": "welcome to blanket on grass... i'm iris. the air is very still today. we're listening to songs that feel like the shade. first... small park. summer through the trees. those strings... they're like how the sun catches the edges of leaves when the wind moves them. just little flickers of gold. okay. let's start.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/06-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/06-song.mp3"
+    },
+    {
+      "order": 7,
+      "type": "track",
+      "track_name": "barefoot",
+      "artist": "june river",
+      "year": 2026,
+      "dj_intro_text": "the ground feels a little cooler now. i like how these drums just... brush against the rhythm. they're barely there. it's the kind of sound meant for when you finally take your shoes off and let your toes sink into something soft. june river... barefoot. 2026.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/07-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/07-song.mp3"
+    },
+    {
+      "order": 8,
+      "type": "track",
+      "track_name": "the dog gets the ball",
+      "artist": "afternoon green",
+      "year": 2024,
+      "dj_intro_text": "the sun is shifting... making the shadows long. this one is by afternoon green. it's called the dog gets the ball. it's very short. it feels like that split second of a successful catch... when everything is fast and then suddenly still. listen to how those bright chords just... snap into place. it's from 2024. afternoon green.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/08-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/08-song.mp3"
+    },
+    {
+      "order": 9,
+      "type": "track",
+      "track_name": "watermelon",
+      "artist": "small park",
+      "year": 2025,
+      "dj_intro_text": "blanket on grass... today feels like finding a quiet spot under the shade. just for a moment. the theme is fresh... new things. something to cut through the heat. this is small park. a track called watermelon. it's from this year. listen for the flute... it feels sharp and cold... like a clean slice. right through the middle. it's the brightest part of the sound. okay. let's start.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/09-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/09-song.mp3"
+    },
+    {
+      "order": 10,
+      "type": "track",
+      "track_name": "everyone's here now",
+      "artist": "june river",
+      "year": 2025,
+      "dj_intro_text": "there’s a slow gathering in this track. it starts with just a sliver of sound... but then the layers keep arriving. the bass. the keys. eventually... every corner of the song is full. june river. everyone’s here now. let's hear how all the parts... find each other.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/10-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/10-song.mp3"
+    },
+    {
+      "order": 11,
+      "type": "track",
+      "track_name": "low sun, long shadows",
+      "artist": "afternoon green",
+      "year": 2024,
+      "dj_intro_text": "blanket on grass... i'm iris. the light is turning gold. okay. let's start. this is afternoon green... low sun, long shadows. the reverb here feels like the sound has further to travel than usual. it’s like the notes are stretching out across the field to find a place to land. very wide. very slow. it makes the space between us feel a little larger.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/11-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/11-song.mp3"
+    },
+    {
+      "order": 12,
+      "type": "track",
+      "track_name": "folding the blanket",
+      "artist": "small park",
+      "year": 2026,
+      "dj_intro_text": "the light is getting a little longer now. everything feels a bit heavy... in a good way. like the air is finally settling back into the earth. this is small park. it’s called folding the blanket. listen to the way the piano notes just sort of... linger. the day is folding up too.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/12-dj.mp3",
+      "music_url": "/spaces/golden-hour/2026-05-19/12-song.mp3"
+    },
+    {
+      "order": 13,
+      "type": "outro",
+      "dj_intro_text": "the light is mostly gone now... just a bit of blue left. the grass is cool. it's time to fold up the blanket and shake off the stray leaves. i'll be back next monday. goodbye... have a soft evening.",
+      "dj_intro_url": "/spaces/golden-hour/2026-05-19/13-outro.mp3"
+    }
+  ]
+}

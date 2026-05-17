@@ -1,0 +1,44 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Next.js
+.next
+out
+build
+.turbo
+
+# environment + secrets — never commit
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.production.local
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# obsolete python pipeline (replaced by scripts/generate-space.mjs)
+__pycache__
+*.pyc
+.venv
+venv
+
+# editor / OS / local agent state
+.DS_Store
+.vscode
+.idea
+.claude
+*.swp
+*.swo
+Thumbs.db
+
+# OPTIONAL — uncomment to keep generated audio out of git.
+# By default it's tracked so the repo plays out of the box without
+# requiring GCP credentials. ~150MB total for one week of all 6 rooms.
+# /public/spaces/

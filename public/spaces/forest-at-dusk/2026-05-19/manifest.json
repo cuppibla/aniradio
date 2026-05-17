@@ -1,0 +1,109 @@
+{
+  "slug": "forest-at-dusk",
+  "week_of": "2026-05-19",
+  "title": "wet moss at dawn",
+  "theme": "the woods just before the world wakes up",
+  "dj": {
+    "name": "Sora",
+    "voice": "en-US-Chirp3-HD-Aoede",
+    "persona": "even softer than Mira. speaks like she's already been walking these woods for hours. she notices light, distance, the way wind moves through leaves. lowercase, long '...' pauses. like a guided meditation, but without the meditation-app cheesiness."
+  },
+  "palette": [
+    "#C9A155",
+    "#1E3A2A"
+  ],
+  "segments": [
+    {
+      "order": 0,
+      "type": "intro",
+      "dj_intro_text": "wet moss at dawn...\nthe light is pulling back now.\nslipping away from the moss... leaving the lower branches in shadow.\nif you listen... you can almost hear the temperature drop.\njust a few degrees.\neight soundscapes tonight.\nthe forest at dusk... when the edges of things start to blur.\nthe trees are becoming shapes instead of wood.\nwe'll just sit here for a while... in the cooling air.\n...\nokay. let's start.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/00-intro.mp3"
+    },
+    {
+      "order": 1,
+      "type": "track",
+      "track_name": "wet moss at dawn",
+      "artist": "field recording",
+      "year": 2026,
+      "dj_intro_text": "the forest is still heavy with it. water gathering on the underside of a leaf... until it's too heavy to stay. that slow... rhythmic drip. before the birds wake up. before the light even touches the ground. just the sound of things being... damp. and quiet. wet moss at dawn. by field recording.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/01-dj.mp3",
+      "music_url": "/spaces/forest-at-dusk/2026-05-19/01-song.mp3"
+    },
+    {
+      "order": 2,
+      "type": "track",
+      "track_name": "redwoods after rain",
+      "artist": "field recording",
+      "year": 2026,
+      "dj_intro_text": "the canopy is so far away... a different world. when the rain stops, the drops take their time. they fall from such a height... a long, slow journey to the moss. by the time the sound reaches us, the clouds have already moved on. it's just the water... finally finding the ground. redwoods after rain.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/02-dj.mp3",
+      "music_url": "/spaces/forest-at-dusk/2026-05-19/02-song.mp3"
+    },
+    {
+      "order": 3,
+      "type": "track",
+      "track_name": "wind through aspens",
+      "artist": "field recording",
+      "year": 2026,
+      "dj_intro_text": "wet moss at dawn... the light is still grey and very thin. today we're looking at the patterns the air makes. this is a field recording... wind through aspens. the leaves are doing all the work here. thousands of them... clicking against each other. a percussion of soft edges. no instruments. just the tree... trying to speak. okay. let's start.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/03-dj.mp3",
+      "music_url": "/spaces/forest-at-dusk/2026-05-19/03-song.mp3"
+    },
+    {
+      "order": 4,
+      "type": "track",
+      "track_name": "cicadas, still air",
+      "artist": "field recording",
+      "year": 2026,
+      "dj_intro_text": "the weight of the heat. it stays level. even when the wind stops... the cicadas keep that same, sharp frequency. they aren't waiting for anything. they don't change. they just are. existing in the middle of the air... no beginning. no end. just this constant state.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/04-dj.mp3",
+      "music_url": "/spaces/forest-at-dusk/2026-05-19/04-song.mp3"
+    },
+    {
+      "order": 5,
+      "type": "track",
+      "track_name": "creek under the bridge",
+      "artist": "field recording",
+      "year": 2026,
+      "dj_intro_text": "the way water moves over stone... it feels like a constant. but if you close your eyes and wait... the rhythm shifts. it’s a million different collisions happening at once. repeating... but never the same way twice. just a creek... under a bridge.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/05-dj.mp3",
+      "music_url": "/spaces/forest-at-dusk/2026-05-19/05-song.mp3"
+    },
+    {
+      "order": 6,
+      "type": "track",
+      "track_name": "owl at midnight",
+      "artist": "field recording",
+      "year": 2026,
+      "dj_intro_text": "it’s very quiet here... just the air moving... then this sound... a single owl. there isn't another voice for miles. no people... no other birds. just that hollow call hitting the trees... and then the silence coming back to swallow it. field recording... owl at midnight.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/06-dj.mp3",
+      "music_url": "/spaces/forest-at-dusk/2026-05-19/06-song.mp3"
+    },
+    {
+      "order": 7,
+      "type": "track",
+      "track_name": "morning mist",
+      "artist": "field recording",
+      "year": 2026,
+      "dj_intro_text": "the fog is heavy today. thick enough to muffle the distance... and the trees. every sharp sound is softened... turned into something round and quiet. it feels like the world is holding its breath... waiting for the light to move through. this is morning mist. from a field recording in 2026.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/07-dj.mp3",
+      "music_url": "/spaces/forest-at-dusk/2026-05-19/07-song.mp3"
+    },
+    {
+      "order": 8,
+      "type": "track",
+      "track_name": "pine needles, dry ground",
+      "artist": "field recording",
+      "year": 2026,
+      "dj_intro_text": "the forest floor is quiet... except for this. a dry, sharp sound underfoot. no drums here. just the weight of a step... and the way the needles break against the earth. it’s a steady beat... if you’re walking slow enough. pine needles... dry ground.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/08-dj.mp3",
+      "music_url": "/spaces/forest-at-dusk/2026-05-19/08-song.mp3"
+    },
+    {
+      "order": 9,
+      "type": "outro",
+      "dj_intro_text": "the blue light is turning to gray... the shadows are stretching out through the trees. let the smell of the damp earth stay with you for a moment longer. i'll be back next monday. keep the quiet close... wherever you are. goodbye for now.",
+      "dj_intro_url": "/spaces/forest-at-dusk/2026-05-19/09-outro.mp3"
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>aniradio · late drive</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root {
+    --ink: #f0d8e8;
+    --ink-soft: #f0d8e8aa;
+    --ink-faint: #f0d8e855;
+    --neon-pink: #ff3da8;
+    --neon-cyan: #5ce0ff;
+    --neon-magenta: #c93ee0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #0c0418;
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* room — purple/magenta night sky into pink horizon */
+  .room {
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 75%, rgba(255,77,158,0.22) 0%, transparent 45%),
+      linear-gradient(180deg,
+        #0a0218 0%,
+        #1a0a3a 25%,
+        #3a0a5a 50%,
+        #5a0f4a 70%,
+        #1a0428 100%);
+    overflow: hidden;
+  }
+
+  /* tiny stars in the upper sky */
+  .stars { position: absolute; top: 0; left: 0; right: 0; height: 50%; pointer-events: none; }
+  .stars .star {
+    position: absolute;
+    width: 2px; height: 2px;
+    border-radius: 999px;
+    background: white;
+    opacity: 0.5;
+    animation: twinkle 4s ease-in-out infinite;
+  }
+  @keyframes twinkle { 0%,100%{opacity:0.3} 50%{opacity:0.9} }
+
+  /* neon sun at horizon — pink core with cyan ring, scan-lined */
+  .sun {
+    position: absolute;
+    top: 32%; left: 50%;
+    transform: translateX(-50%);
+    width: 240px; height: 240px;
+    border-radius: 999px;
+    background:
+      repeating-linear-gradient(180deg,
+        transparent 0 14px,
+        rgba(12,4,24,0.55) 14px 16px),
+      radial-gradient(circle at 50% 45%,
+        #fff5a8 0%,
+        #ff80c8 25%,
+        #ff3da8 50%,
+        #c93ee0 75%,
+        transparent 95%);
+    filter: blur(0.3px);
+    box-shadow: 0 0 60px 20px rgba(255,61,168,0.35), 0 0 120px 40px rgba(201,62,224,0.18);
+  }
+  .sun::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 999px;
+    border: 1px solid rgba(92,224,255,0.4);
+    box-shadow: 0 0 8px rgba(92,224,255,0.5);
+  }
+
+  /* mountain silhouettes at horizon with neon outline */
+  .mountains {
+    position: absolute;
+    bottom: 38%; left: 0; right: 0; height: 90px;
+    pointer-events: none;
+  }
+  .mountains svg { width: 100%; height: 100%; display: block; }
+
+  /* perspective grid — the freeway */
+  .grid-floor {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 38%;
+    perspective: 360px;
+    perspective-origin: 50% 0%;
+    overflow: hidden;
+  }
+  .grid-plane {
+    position: absolute;
+    bottom: 0; left: -10%; right: -10%;
+    height: 220%;
+    transform: rotateX(72deg);
+    transform-origin: bottom;
+    background-image:
+      linear-gradient(to right,
+        transparent 0%,
+        rgba(255,61,168,0.45) 49.5%, rgba(255,61,168,0.45) 50.5%,
+        transparent 100%),
+      repeating-linear-gradient(90deg,
+        transparent 0 60px,
+        rgba(92,224,255,0.35) 60px 62px),
+      repeating-linear-gradient(0deg,
+        transparent 0 60px,
+        rgba(255,61,168,0.32) 60px 62px);
+    animation: grid-rush 1.2s linear infinite;
+  }
+  @keyframes grid-rush {
+    from { background-position: 0 0, 0 0, 0 0; }
+    to   { background-position: 0 0, 0 0, 0 60px; }
+  }
+  /* fade the bottom of the grid so it doesn't clash with the info bar */
+  .grid-floor::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0; right: 0; height: 30%;
+    background: linear-gradient(to bottom, transparent, #0a0218);
+    pointer-events: none;
+  }
+
+  /* scanlines overlay across the whole screen */
+  .scanlines {
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg,
+      transparent 0 2px,
+      rgba(0,0,0,0.18) 2px 3px);
+    mix-blend-mode: multiply;
+    opacity: 0.55;
+  }
+
+  /* the playing object: a car radio mounted at dashboard level */
+  .deck {
+    position: absolute;
+    bottom: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 520px;
+    height: 110px;
+    background: linear-gradient(180deg, #2a0a3a 0%, #14041e 100%);
+    border-radius: 8px;
+    border: 1px solid rgba(255,61,168,0.4);
+    box-shadow:
+      0 0 30px rgba(255,61,168,0.2),
+      0 0 60px rgba(201,62,224,0.15),
+      inset 0 1px 0 rgba(255,255,255,0.06);
+    z-index: 6;
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    gap: 14px;
+    align-items: center;
+    padding: 14px 18px;
+  }
+
+  /* left knob */
+  .knob {
+    width: 60px; height: 60px;
+    border-radius: 999px;
+    background:
+      radial-gradient(circle at 35% 30%, #5a2a6a 0%, #1a041a 80%);
+    border: 1px solid rgba(255,61,168,0.5);
+    position: relative;
+    justify-self: center;
+  }
+  .knob::after {
+    content: "";
+    position: absolute;
+    top: 8%; left: 50%;
+    width: 2px; height: 30%;
+    background: var(--neon-cyan);
+    box-shadow: 0 0 4px var(--neon-cyan);
+    transform: translateX(-50%);
+  }
+
+  /* center LCD display */
+  .lcd {
+    height: 80px;
+    background: #0a0410;
+    border: 1px solid rgba(92,224,255,0.3);
+    border-radius: 4px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: inset 0 0 12px rgba(92,224,255,0.12);
+  }
+  .lcd .top-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: ui-monospace, "SF Mono", "Menlo", monospace;
+    font-size: 10px;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 4px var(--neon-cyan);
+    letter-spacing: 0.18em;
+  }
+  .lcd .song {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 18px;
+    color: var(--neon-pink);
+    text-shadow: 0 0 6px rgba(255,61,168,0.6);
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
+  }
+  .lcd .progress {
+    height: 2px;
+    background: rgba(92,224,255,0.15);
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  .lcd .progress::after {
+    content: "";
+    display: block;
+    width: 35%;
+    height: 100%;
+    background: var(--neon-cyan);
+    box-shadow: 0 0 6px var(--neon-cyan);
+  }
+
+  /* right knob — but also Theo's "transmitting" indicator above it */
+  .theo-led {
+    position: absolute;
+    top: -22px; right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: ui-monospace, "SF Mono", "Menlo", monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--neon-pink);
+  }
+  .theo-led .dot {
+    width: 6px; height: 6px;
+    border-radius: 999px;
+    background: var(--neon-pink);
+    box-shadow: 0 0 6px var(--neon-pink), 0 0 12px var(--neon-pink);
+    animation: theo-pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes theo-pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* DJ Theo's bigger ambient presence — a soft magenta haze in the right of the cabin */
+  .theo-presence {
+    position: absolute;
+    right: 8%;
+    top: 38%;
+    width: 240px; height: 240px;
+    pointer-events: none;
+    z-index: 5;
+  }
+  .theo-presence::before {
+    content: "";
+    position: absolute; inset: 0;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(201,62,224,0.4) 0%, rgba(255,61,168,0.15) 40%, transparent 75%);
+    filter: blur(20px);
+    animation: theo-breathe 4s ease-in-out infinite;
+  }
+  @keyframes theo-breathe {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.12); opacity: 1; }
+  }
+
+  /* header */
+  header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 32px;
+  }
+  .back {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-faint);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .back:hover { color: var(--ink); }
+  .room-title { text-align: center; }
+  .room-title h1 {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+  }
+  .room-title .dj-name {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-top: 4px;
+  }
+  .room-time {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+  }
+
+  /* bottom info bar */
+  .info-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 10;
+    padding: 26px 32px 30px;
+    background: linear-gradient(to top, rgba(10,2,24,0.95) 0%, transparent 100%);
+  }
+  .ticker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: ui-monospace, "SF Mono", "Menlo", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-faint);
+    margin-bottom: 12px;
+  }
+  .ticker .pulse {
+    width: 6px; height: 6px;
+    border-radius: 999px;
+    background: var(--neon-pink);
+    box-shadow: 0 0 6px var(--neon-pink);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+  .ticker .next { margin-left: auto; color: var(--ink-faint); }
+  .track-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .track-title {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .track-by {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .controls { display: flex; gap: 8px; }
+  .ctrl {
+    width: 38px; height: 38px;
+    border-radius: 999px;
+    border: 1px solid rgba(240,216,232,0.2);
+    background: transparent;
+    color: var(--ink-soft);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s ease;
+  }
+  .ctrl:hover { border-color: var(--neon-pink); color: var(--ink); box-shadow: 0 0 8px rgba(255,61,168,0.35); }
+</style>
+</head>
+<body>
+
+<div class="room">
+
+  <!-- stars -->
+  <div class="stars">
+    <div class="star" style="top: 8%; left: 12%;"></div>
+    <div class="star" style="top: 18%; left: 23%; animation-delay: 1s;"></div>
+    <div class="star" style="top: 6%; left: 38%; animation-delay: 2s;"></div>
+    <div class="star" style="top: 14%; left: 55%; animation-delay: 0.5s;"></div>
+    <div class="star" style="top: 22%; left: 72%; animation-delay: 1.5s;"></div>
+    <div class="star" style="top: 5%; left: 88%; animation-delay: 2.5s;"></div>
+    <div class="star" style="top: 28%; left: 8%; animation-delay: 3s;"></div>
+    <div class="star" style="top: 11%; left: 68%; animation-delay: 1.2s;"></div>
+    <div class="star" style="top: 25%; left: 92%; animation-delay: 0.8s;"></div>
+    <div class="star" style="top: 19%; left: 45%; animation-delay: 2.1s;"></div>
+  </div>
+
+  <!-- neon sun -->
+  <div class="sun"></div>
+
+  <!-- mountains silhouettes -->
+  <div class="mountains">
+    <svg viewBox="0 0 1400 90" preserveAspectRatio="none">
+      <path d="M0,90 L0,55 L120,15 L240,55 L360,25 L480,55 L600,10 L720,55 L840,30 L960,55 L1080,5 L1200,55 L1320,30 L1400,55 L1400,90 Z"
+            fill="#0a0218"
+            stroke="#ff3da8" stroke-width="0.6" stroke-opacity="0.5"/>
+    </svg>
+  </div>
+
+  <!-- DJ Theo ambient haze -->
+  <div class="theo-presence"></div>
+
+  <!-- the deck (car radio) — Theo's "instrument" -->
+  <div class="deck">
+    <div class="knob"></div>
+    <div class="lcd">
+      <div class="top-row">
+        <span>FM 102.7</span>
+        <span>CH 04 / ∞</span>
+      </div>
+      <div class="song">red lights</div>
+      <div class="progress"></div>
+    </div>
+    <div class="knob"></div>
+    <div class="theo-led">
+      <span class="dot"></span>
+      <span>Theo · on air</span>
+    </div>
+  </div>
+
+  <!-- perspective grid floor -->
+  <div class="grid-floor">
+    <div class="grid-plane"></div>
+  </div>
+
+  <!-- scanlines overlay -->
+  <div class="scanlines"></div>
+
+  <header>
+    <a href="lobby.html" class="back">← leave room</a>
+    <div class="room-title">
+      <h1>late drive · 2am freeway</h1>
+      <div class="dj-name">with Theo</div>
+    </div>
+    <div class="room-time">tuesday · 02:14 am</div>
+  </header>
+
+  <div class="info-bar">
+    <div class="ticker">
+      <span class="pulse"></span>
+      <span>now playing · track 4 of ∞ · channel mode</span>
+      <span class="next">next: tail lights ahead · then: nobody on the 405</span>
+    </div>
+    <div class="track-row">
+      <div>
+        <div class="track-title">red lights</div>
+        <div class="track-by">midnight reverb · 2026</div>
+      </div>
+      <div class="controls">
+        <button class="ctrl" aria-label="pause">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <rect x="2.5" y="2" width="2.5" height="8" rx="0.5"/>
+            <rect x="7" y="2" width="2.5" height="8" rx="0.5"/>
+          </svg>
+        </button>
+        <button class="ctrl" aria-label="skip">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <path d="M2 2v8l5-4-5-4zm6 0v8h2V2H8z"/>
+          </svg>
+        </button>
+        <button class="ctrl" aria-label="info">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="6" cy="6" r="4.5"/>
+            <line x1="6" y1="5" x2="6" y2="9"/>
+            <circle cx="6" cy="3.5" r="0.4" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

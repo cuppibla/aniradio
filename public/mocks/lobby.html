@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>aniradio · lobby</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root {
+    --bg: #0b0a10;
+    --ink: #e8e0d4;
+    --ink-soft: #e8e0d480;
+    --ink-faint: #e8e0d440;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  body {
+    background:
+      radial-gradient(ellipse at 15% 5%, #2a1830 0%, transparent 45%),
+      radial-gradient(ellipse at 85% 95%, #1a2b3a 0%, transparent 45%),
+      var(--bg);
+    padding: 60px 8vw 80px;
+  }
+
+  /* header */
+  header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+  .wordmark {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 28px;
+    letter-spacing: 0.02em;
+  }
+  .wordmark span { color: var(--ink-soft); }
+  nav {
+    display: flex;
+    gap: 28px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-faint);
+  }
+  nav a { color: inherit; text-decoration: none; }
+  nav a.active { color: var(--ink); }
+
+  /* intro line */
+  .intro {
+    max-width: 540px;
+    margin-bottom: 48px;
+  }
+  .intro h1 {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  .intro p {
+    color: var(--ink-soft);
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+
+  .card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .card:hover { transform: translateY(-2px); filter: brightness(1.05); }
+  .card .scene { position: absolute; inset: 0; }
+  .card .meta {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22px;
+    background: linear-gradient(to top, rgba(11,10,16,0.85) 0%, rgba(11,10,16,0.4) 35%, transparent 65%);
+  }
+  .card h2 {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .card .dj {
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 14px;
+  }
+  .card .now {
+    font-size: 11px;
+    color: var(--ink-faint);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .pulse {
+    width: 6px; height: 6px; border-radius: 999px;
+    background: #b8e3a8;
+    box-shadow: 0 0 8px rgba(184,227,168,0.7);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+  .card .stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ink-faint);
+    margin-top: 10px;
+  }
+
+  /* archive footer */
+  .archive {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 28px;
+    margin-top: 36px;
+  }
+  .archive h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-faint);
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+  .archive-row {
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .archive-item {
+    flex-shrink: 0;
+    font-size: 12px;
+    color: var(--ink-soft);
+    border-left: 1px solid rgba(255,255,255,0.08);
+    padding-left: 14px;
+  }
+  .archive-item .when {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-faint);
+    margin-bottom: 4px;
+  }
+
+  /* ----- per-space art ----- */
+
+  /* 1 bedroom pop — peach + lavender, soft orb */
+  .scene.bedroom {
+    background: radial-gradient(circle at 35% 40%, #FFB89E 0%, #E89BB0 30%, #A78BC9 65%, #3a2840 100%);
+  }
+  .scene.bedroom::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 60%; height: 60%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255,225,210,0.5), transparent 70%);
+    filter: blur(20px);
+    animation: breathe 5s ease-in-out infinite;
+  }
+  @keyframes breathe { 0%,100%{transform:translate(-50%,-50%) scale(1)} 50%{transform:translate(-50%,-50%) scale(1.08)} }
+
+  /* 2 lofi study — cool blue + rain + cassette */
+  .scene.lofi {
+    background: linear-gradient(160deg, #1a3550 0%, #0c1a2a 100%);
+    overflow: hidden;
+  }
+  .scene.lofi .cassette {
+    position: absolute;
+    top: 38%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    aspect-ratio: 8/5;
+    background: linear-gradient(135deg, #2a3d52 0%, #1a2838 100%);
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+  }
+  .scene.lofi .reel {
+    position: absolute;
+    top: 50%;
+    width: 26%; aspect-ratio: 1;
+    border-radius: 999px;
+    background: radial-gradient(circle, #0a1320 0%, #060c14 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    animation: spin 4s linear infinite;
+  }
+  .scene.lofi .reel.left { left: 12%; transform: translateY(-50%); }
+  .scene.lofi .reel.right { right: 12%; transform: translateY(-50%); }
+  .scene.lofi .reel::after {
+    content: "";
+    position: absolute;
+    inset: 35%;
+    border-radius: 999px;
+    background: #9fc3e0;
+    opacity: 0.4;
+  }
+  @keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+  .rain { position: absolute; inset: 0; pointer-events: none; opacity: 0.55; }
+  .rain::before, .rain::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(
+      72deg,
+      transparent 0 18px,
+      rgba(159,195,224,0.25) 18px 19px,
+      transparent 19px 26px
+    );
+    animation: fall 0.9s linear infinite;
+  }
+  .rain::after { animation-duration: 1.3s; opacity: 0.4; }
+  @keyframes fall { from { transform: translateY(-30px); } to { transform: translateY(30px); } }
+
+  /* 3 forest white noise — green + amber + drifting */
+  .scene.forest {
+    background:
+      radial-gradient(ellipse at 60% 80%, #c9a155 0%, transparent 45%),
+      linear-gradient(160deg, #1e3a2a 0%, #0a1a14 100%);
+  }
+  .scene.forest .tree {
+    position: absolute;
+    bottom: -10%; left: 50%;
+    transform: translateX(-50%);
+    width: 0; height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 220px solid #0a1d10;
+    opacity: 0.85;
+  }
+  .scene.forest .tree::before {
+    content: "";
+    position: absolute;
+    left: -55px; bottom: -180px;
+    width: 0; height: 0;
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-bottom: 150px solid #0d2517;
+  }
+  .scene.forest .firefly {
+    position: absolute;
+    width: 3px; height: 3px;
+    border-radius: 999px;
+    background: #ffd98a;
+    box-shadow: 0 0 8px #ffd98a;
+    animation: drift 4s ease-in-out infinite;
+  }
+  @keyframes drift { 0%,100% { transform: translate(0,0); opacity:0.8 } 50%{transform:translate(20px,-15px); opacity:1} }
+
+  /* 4 late drive — purple/magenta neon + scanlines */
+  .scene.drive {
+    background: linear-gradient(180deg, #1a0a2e 0%, #4a0f4a 50%, #0c0418 100%);
+    overflow: hidden;
+  }
+  .scene.drive::before {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 50%;
+    background:
+      repeating-linear-gradient(0deg, transparent 0 6px, rgba(255,80,200,0.18) 6px 7px),
+      linear-gradient(180deg, transparent 0%, #220a3a 100%);
+    transform: perspective(120px) rotateX(50deg);
+    transform-origin: top;
+  }
+  .scene.drive .sun {
+    position: absolute;
+    top: 22%; left: 50%; transform: translateX(-50%);
+    width: 130px; height: 130px;
+    border-radius: 999px;
+    background: radial-gradient(circle, #ff80c8 0%, #ff4d9e 50%, transparent 75%);
+  }
+
+  /* 5 sunday kitchen — terracotta + window light */
+  .scene.kitchen {
+    background:
+      radial-gradient(ellipse at 20% 25%, rgba(255,235,180,0.45) 0%, transparent 55%),
+      linear-gradient(160deg, #d18a5b 0%, #6b3a2d 100%);
+  }
+  .scene.kitchen .window {
+    position: absolute;
+    top: 18%; left: 15%;
+    width: 30%; height: 45%;
+    border: 6px solid rgba(255,255,255,0.18);
+    background: linear-gradient(180deg, rgba(255,235,180,0.4) 0%, rgba(255,235,180,0.1) 100%);
+  }
+  .scene.kitchen .window::before, .scene.kitchen .window::after {
+    content: "";
+    position: absolute;
+    background: rgba(255,255,255,0.18);
+  }
+  .scene.kitchen .window::before { left: 50%; top: 0; bottom: 0; width: 3px; transform: translateX(-50%); }
+  .scene.kitchen .window::after { left: 0; right: 0; top: 50%; height: 3px; transform: translateY(-50%); }
+
+  /* 6 golden hour park — orange coral + lens flare */
+  .scene.park {
+    background: radial-gradient(circle at 70% 35%, #ffb069 0%, #ff7a5c 35%, #a83c52 70%, #2a0f1c 100%);
+  }
+  .scene.park::before {
+    content: "";
+    position: absolute;
+    top: 30%; left: 65%;
+    width: 4px; height: 4px;
+    border-radius: 999px;
+    background: #fff7e6;
+    box-shadow:
+      0 0 40px 8px rgba(255,247,230,0.8),
+      0 0 80px 20px rgba(255,200,140,0.4);
+  }
+  .scene.park::after {
+    content: "";
+    position: absolute;
+    top: 60%; left: 25%;
+    width: 80px; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,247,230,0.4), transparent);
+    transform: rotate(-15deg);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wordmark">aniradio<span>.</span></div>
+  <nav>
+    <a href="#" class="active">this week</a>
+    <a href="#">archive</a>
+    <a href="#">about</a>
+  </nav>
+</header>
+
+<div class="intro">
+  <h1>six rooms.<br>one DJ each.<br>refreshed every monday.</h1>
+  <p>pick a room. stay as long as you want. the music keeps coming in a different order each time.</p>
+</div>
+
+<div class="grid">
+
+  <!-- 1 bedroom pop -->
+  <div class="card">
+    <div class="scene bedroom"></div>
+    <div class="meta">
+      <div class="now"><span class="pulse"></span>now: porcelain · track 4 of 14</div>
+      <h2>dreamy creamy<br>bedroom pop</h2>
+      <div class="dj">with Mira</div>
+      <div class="stats"><span>14 tracks</span><span>refreshed mon</span></div>
+    </div>
+  </div>
+
+  <!-- 2 lofi study -->
+  <div class="card">
+    <div class="scene lofi">
+      <div class="cassette">
+        <div class="reel left"></div>
+        <div class="reel right"></div>
+      </div>
+      <div class="rain"></div>
+    </div>
+    <div class="meta">
+      <div class="now"><span class="pulse"></span>now: late draft · track 9 of 18</div>
+      <h2>lofi study<br>cool blue</h2>
+      <div class="dj">with Yui</div>
+      <div class="stats"><span>18 tracks</span><span>refreshed mon</span></div>
+    </div>
+  </div>
+
+  <!-- 3 forest -->
+  <div class="card">
+    <div class="scene forest">
+      <div class="tree"></div>
+      <div class="firefly" style="top:40%; left:25%;"></div>
+      <div class="firefly" style="top:55%; left:75%; animation-delay:1s;"></div>
+      <div class="firefly" style="top:30%; left:65%; animation-delay:2s;"></div>
+    </div>
+    <div class="meta">
+      <div class="now"><span class="pulse"></span>now: redwoods after rain · 22 min</div>
+      <h2>forest at dusk<br>nature sounds</h2>
+      <div class="dj">with Sora</div>
+      <div class="stats"><span>8 soundscapes</span><span>refreshed mon</span></div>
+    </div>
+  </div>
+
+  <!-- 4 late drive -->
+  <div class="card">
+    <div class="scene drive">
+      <div class="sun"></div>
+    </div>
+    <div class="meta">
+      <div class="now"><span class="pulse"></span>now: red lights · track 2 of 12</div>
+      <h2>late drive<br>2am freeway</h2>
+      <div class="dj">with Theo</div>
+      <div class="stats"><span>12 tracks</span><span>refreshed mon</span></div>
+    </div>
+  </div>
+
+  <!-- 5 sunday kitchen -->
+  <div class="card">
+    <div class="scene kitchen">
+      <div class="window"></div>
+    </div>
+    <div class="meta">
+      <div class="now"><span class="pulse"></span>now: toast and tea · track 6 of 15</div>
+      <h2>sunday kitchen<br>slow morning</h2>
+      <div class="dj">with Wren</div>
+      <div class="stats"><span>15 tracks</span><span>refreshed mon</span></div>
+    </div>
+  </div>
+
+  <!-- 6 golden hour park -->
+  <div class="card">
+    <div class="scene park"></div>
+    <div class="meta">
+      <div class="now"><span class="pulse"></span>now: blanket on grass · track 1 of 11</div>
+      <h2>golden hour<br>saturday park</h2>
+      <div class="dj">with Iris</div>
+      <div class="stats"><span>11 tracks</span><span>refreshed mon</span></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="archive">
+  <h3>last week's rooms</h3>
+  <div class="archive-row">
+    <div class="archive-item">
+      <div class="when">may 8 · bedroom pop</div>
+      paper lamp · with Mira · 12 tracks
+    </div>
+    <div class="archive-item">
+      <div class="when">may 8 · lofi study</div>
+      thursday rain · with Yui · 16 tracks
+    </div>
+    <div class="archive-item">
+      <div class="when">may 8 · forest</div>
+      wet moss at dawn · with Sora · 7 soundscapes
+    </div>
+    <div class="archive-item">
+      <div class="when">may 8 · late drive</div>
+      i405 north · with Theo · 10 tracks
+    </div>
+    <div class="archive-item">
+      <div class="when">may 8 · kitchen</div>
+      sourdough sunday · with Wren · 14 tracks
+    </div>
+    <div class="archive-item">
+      <div class="when">may 8 · park</div>
+      kites and bees · with Iris · 9 tracks
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

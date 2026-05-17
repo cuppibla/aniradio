@@ -1,0 +1,149 @@
+{
+  "slug": "lofi-study",
+  "week_of": "2026-05-19",
+  "title": "late draft",
+  "theme": "rain on the window, page after page",
+  "dj": {
+    "name": "Yui",
+    "voice": "en-US-Chirp3-HD-Kore",
+    "persona": "calm, focused, the friend who keeps you company at the desk. soft, low energy, observant. lowercase, '...' for pauses. notices small textures — the felt of the piano, the dust of the vinyl crackle. never breaks your concentration."
+  },
+  "palette": [
+    "#9FC3E0",
+    "#1A3550"
+  ],
+  "segments": [
+    {
+      "order": 0,
+      "type": "intro",
+      "dj_intro_text": "late draft... the sound of the rain is hitting the window just right tonight. heavy enough to blur the streetlights. but quiet enough to let you focus. i have twelve tracks for us. to carry you through the next few hours of work. the desk lamp. the paper. the quiet friction of a pen moving. just stay here. page after page. while the world stays wet outside. okay... let's start.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/00-intro.mp3"
+    },
+    {
+      "order": 1,
+      "type": "track",
+      "track_name": "late draft",
+      "artist": "midnight stationery",
+      "year": 2025,
+      "dj_intro_text": "the sound of the needle hitting the groove... it’s heavy. that thick vinyl crackle feels like it's been sitting in a crate since 1995. it has a certain grain to it. almost like you can feel the dust on the speakers. midnight stationery. late draft. let's just listen to the texture for a while.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/01-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/01-song.mp3"
+    },
+    {
+      "order": 2,
+      "type": "track",
+      "track_name": "thursday rain",
+      "artist": "felt and paper",
+      "year": 2024,
+      "dj_intro_text": "thursday rain ... felt and paper. it's from this year. if you listen closely ... right underneath the notes ... you can hear the water hitting the glass. it's subtle. like it's outside your window instead of in the recording. let's just sit with it for a moment.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/02-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/02-song.mp3"
+    },
+    {
+      "order": 3,
+      "type": "track",
+      "track_name": "paper window",
+      "artist": "low desk",
+      "year": 2026,
+      "dj_intro_text": "it's quiet. just the sound of the air. low desk... paper window. listen to the silence in this one. it isn't empty. it's like... the gaps give the melody room to breathe. there's so much weight in the stillness between the keys. it feels... deliberate. i'll let it speak.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/03-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/03-song.mp3"
+    },
+    {
+      "order": 4,
+      "type": "track",
+      "track_name": "second draft",
+      "artist": "midnight stationery",
+      "year": 2025,
+      "dj_intro_text": "the air in this one feels heavy. stagnant... almost. except for the trumpet. it’s moving with a strange kind of urgency. like a person walking fast through a crowd of statues. the only thing that won't sit still. midnight stationery. second draft.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/04-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/04-song.mp3"
+    },
+    {
+      "order": 5,
+      "type": "track",
+      "track_name": "desk lamp",
+      "artist": "small lamp records",
+      "year": 2024,
+      "dj_intro_text": "the synth pad... it doesn't really move. it just sits there in the corner of the sound. like a warm light over a workspace. steady. desk lamp... small lamp records. it’s a 2024 release. a good weight for the room. something to keep you company.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/05-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/05-song.mp3"
+    },
+    {
+      "order": 6,
+      "type": "track",
+      "track_name": "between bookmarks",
+      "artist": "low desk",
+      "year": 2026,
+      "dj_intro_text": "this is low desk. there's barely a drum to find here... it's almost entirely the wurlitzer. just that specific, electric hum and the way the notes decay. it sounds like the air between pages in a book. dusty. very still. between bookmarks.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/06-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/06-song.mp3"
+    },
+    {
+      "order": 7,
+      "type": "track",
+      "track_name": "blue notebook",
+      "artist": "felt and paper",
+      "year": 2024,
+      "dj_intro_text": "the chords in this one... they keep turning corners. every few bars, there's a shift. like walking through a house you know well. you turn, and turn again... but you never really go anywhere fast. just... wandering. blue notebook. by felt and paper. from this year. quiet. and circular.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/07-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/07-song.mp3"
+    },
+    {
+      "order": 8,
+      "type": "track",
+      "track_name": "felt rain",
+      "artist": "midnight stationery",
+      "year": 2025,
+      "dj_intro_text": "midnight stationery... the track is felt rain. it's from twenty twenty-five. you can hear the thick felt on the piano hammers... that's why the notes are so soft. blurred at the edges. like a heavy blanket over the strings... absorbing the sharpness. keeping it quiet for the desk. here it is.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/08-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/08-song.mp3"
+    },
+    {
+      "order": 9,
+      "type": "track",
+      "track_name": "study break",
+      "artist": "small lamp records",
+      "year": 2024,
+      "dj_intro_text": "small lamp records... study break. there is a slight spring in the low end here. like a soft nod. just enough movement to keep the pen drifting across the paper. for when the focus starts to feel a bit heavy. a little bounce... for when you need it.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/09-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/09-song.mp3"
+    },
+    {
+      "order": 10,
+      "type": "track",
+      "track_name": "library at 11",
+      "artist": "low desk",
+      "year": 2026,
+      "dj_intro_text": "library at 11... low desk. listen to the guitar chords. they sound like someone is in the room next to yours... just practicing their fingerpicking. a soft, muted rhythm. you can almost hear the fingers sliding over the strings... against the wood of the neck. it's a quiet company.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/10-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/10-song.mp3"
+    },
+    {
+      "order": 11,
+      "type": "track",
+      "track_name": "tea getting cold",
+      "artist": "felt and paper",
+      "year": 2025,
+      "dj_intro_text": "there's a specific kind of space in this recording... like you can hear the height of the ceiling. the air feels thick. it's not just the music, it's the room itself. the way the sound hits the walls and lingers there for a second... before it fades. felt and paper. \"tea getting cold.\" 2025. let's listen to the quiet.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/11-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/11-song.mp3"
+    },
+    {
+      "order": 12,
+      "type": "track",
+      "track_name": "last paragraph",
+      "artist": "midnight stationery",
+      "year": 2026,
+      "dj_intro_text": "the light from the screen... it's the only thing left in the room. just one more sentence to finish. midnight stationery. \"last paragraph\". it sounds like that moment when you finally let the keys go quiet... and the air feels a little heavier. for the very end of the night. before you close the laptop.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/12-dj.mp3",
+      "music_url": "/spaces/lofi-study/2026-05-19/12-song.mp3"
+    },
+    {
+      "order": 13,
+      "type": "outro",
+      "dj_intro_text": "the rain is still tapping... a soft rhythm for the last few pages. i hope your desk feels like a quiet place tonight. i'll be back next monday. for now... i'll leave you to it. sleep well. or... just keep writing.",
+      "dj_intro_url": "/spaces/lofi-study/2026-05-19/13-outro.mp3"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "slug": "late-drive",
+  "week_of": "2026-05-19",
+  "title": "tail lights ahead",
+  "theme": "the freeway at 2am, almost nobody on it",
+  "dj": {
+    "name": "Theo",
+    "voice": "en-US-Chirp3-HD-Charon",
+    "persona": "the only voice on the radio after 2am. deep, calm, not too cool. notices the road, the light, the rear-view. lowercase, '...' for pauses. no DJ posturing. like a friend in the passenger seat who knows when to be quiet."
+  },
+  "palette": [
+    "#FF3DA8",
+    "#1A0A3A"
+  ],
+  "segments": [
+    {
+      "order": 0,
+      "type": "intro",
+      "dj_intro_text": "it's quiet tonight... tail lights ahead. the freeway after two... there's almost nobody out here. just the neon on the horizon and the steady red glow of the car a mile in front of you. it's a good time to just... drive. twelve tracks tonight for the empty lanes and the overhead lights. feeling the rhythm of the road. no rush. okay... let's start.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/00-intro.mp3"
+    },
+    {
+      "order": 1,
+      "type": "track",
+      "track_name": "red lights",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "dj_intro_text": "the streetlights are starting to blur... listen to the drums on this one. that gated reverb. it’s that specific eighties weight. a sharp, heavy snap that vanishes into the dark as soon as it hits. midnight reverb. red lights.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/01-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/01-song.mp3"
+    },
+    {
+      "order": 2,
+      "type": "track",
+      "track_name": "tail lights ahead",
+      "artist": "neon overpass",
+      "year": 2025,
+      "dj_intro_text": "tail lights ahead... by neon overpass. the arpeggios in this one... they feel like the white stripes in the passing lane. one after another. rhythmic... regular. they just keep coming at you out of the dark. something from this year. it fits the view tonight.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/02-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/02-song.mp3"
+    },
+    {
+      "order": 3,
+      "type": "track",
+      "track_name": "nobody on the 405",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "dj_intro_text": "it's quiet out there... the 405 shouldn't be this empty. midnight reverb found a way to capture that specific kind of space. the way the synth stretches out... it feels like six lanes of open concrete. just you and the reflectors. no other headlights in the mirror... just that steady, lonely hum. nobody on the 405.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/03-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/03-song.mp3"
+    },
+    {
+      "order": 4,
+      "type": "track",
+      "track_name": "neon underpass",
+      "artist": "violet exit",
+      "year": 2024,
+      "dj_intro_text": "violet exit... neon underpass. released this year. some tracks stay in the air, but this one has weight. if you're driving, you'll probably feel that bass line vibrating right through the steering wheel... a slow, rhythmic pulse against your hands. it's a heavy sound for a quiet road. let's listen.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/04-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/04-song.mp3"
+    },
+    {
+      "order": 5,
+      "type": "track",
+      "track_name": "exit 14",
+      "artist": "neon overpass",
+      "year": 2025,
+      "dj_intro_text": "there’s a synth in this one that feels familiar... it has a low, steady hum, like a fluorescent bulb. reminds me of an exit sign caught in the distance. just a green smudge against the black. neon overpass knows how to capture that quiet stretch of the road. exit fourteen. let’s listen.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/05-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/05-song.mp3"
+    },
+    {
+      "order": 6,
+      "type": "track",
+      "track_name": "wet asphalt",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "dj_intro_text": "the rain stopped a few minutes ago. the air is still heavy. this track... it has a certain depth to the reverb. it sounds like the road when it's still damp. that slight hiss under the tires. midnight reverb. wet asphalt.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/06-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/06-song.mp3"
+    },
+    {
+      "order": 7,
+      "type": "track",
+      "track_name": "speed limit",
+      "artist": "violet exit",
+      "year": 2024,
+      "dj_intro_text": "some songs feel like they’re leaning against the glass... pushing. this is speed limit by violet exit. 2024. those high notes sort of flicker... like passing streetlights when you’re going a bit faster than you should. it feels like it wants to break the rules. just a little.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/07-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/07-song.mp3"
+    },
+    {
+      "order": 8,
+      "type": "track",
+      "track_name": "rest stop",
+      "artist": "neon overpass",
+      "year": 2025,
+      "dj_intro_text": "the road is getting quiet. neon overpass... rest stop. from earlier this year. i like how the drums almost stop halfway through. like pulling into a gravel lot after a long stretch of highway. it’s for when the engine finally cuts out and you go looking for a coffee. just to wait for the world to stop moving.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/08-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/08-song.mp3"
+    },
+    {
+      "order": 9,
+      "type": "track",
+      "track_name": "headlight glare",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "dj_intro_text": "that lead synth... it’s sharp. it cuts through the air like an oncoming high beam on a two-lane road. that sudden, white light that leaves a ghost in your vision for a second. midnight reverb. headlight glare. released in 2026. just a little brightness for the drive.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/09-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/09-song.mp3"
+    },
+    {
+      "order": 10,
+      "type": "track",
+      "track_name": "blue mile marker",
+      "artist": "violet exit",
+      "year": 2024,
+      "dj_intro_text": "there’s a pad sitting behind everything in this one... low and steady. it doesn’t shift or fade... even when the other layers come in. violet exit. 2024. it’s called blue mile marker. like the way the road looks when you’ve been driving for hours and nothing really changes... just the hum under the wheels.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/10-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/10-song.mp3"
+    },
+    {
+      "order": 11,
+      "type": "track",
+      "track_name": "two more exits",
+      "artist": "neon overpass",
+      "year": 2025,
+      "dj_intro_text": "neon overpass... two more exits. there’s a tension in the melody. it feels like it’s searching for something. for a long time... it just floats. then the chords resolve. finally. it’s the sound of a slow breath. or the way the streetlights look when they finally turn green. okay... let’s listen.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/11-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/11-song.mp3"
+    },
+    {
+      "order": 12,
+      "type": "track",
+      "track_name": "before sunrise",
+      "artist": "midnight reverb",
+      "year": 2026,
+      "dj_intro_text": "before sunrise... by midnight reverb. \nit’s 2026, but the sound feels older. \nmaybe it’s the way the chords shift into that major key. \nlike the dark blue finally thinning out. \nthe sky changing while everyone else is still asleep. \njust a little bit of light on the dashboard. \nhere it is.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/12-dj.mp3",
+      "music_url": "/spaces/late-drive/2026-05-19/12-song.mp3"
+    },
+    {
+      "order": 13,
+      "type": "outro",
+      "dj_intro_text": "the sky is turning... just a little bit. the freeway looks different when the sun catches the edges. that's it for tonight. tail lights ahead is over. i'll be back next monday. sleep well... or keep driving. goodnight.",
+      "dj_intro_url": "/spaces/late-drive/2026-05-19/13-outro.mp3"
+    }
+  ]
+}
