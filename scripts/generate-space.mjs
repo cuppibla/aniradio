@@ -27,6 +27,10 @@ import { parseArgs } from "node:util";
 import fs from "node:fs/promises";
 import path from "node:path";
 
+// Auto-load .env.local so ELEVENLABS_API_KEY (and any other local secrets)
+// are available without requiring the caller to pass --env-file every time.
+try { process.loadEnvFile(".env.local"); } catch { /* fine if missing */ }
+
 const { values: args } = parseArgs({
   options: {
     space: { type: "string" },
@@ -124,6 +128,14 @@ async function geminiScript(userPrompt) {
   return (resp.text ?? "").trim();
 }
 
+// Dispatcher: pick the TTS engine for this DJ.
+// week.dj.engine === "elevenlabs"  → elevenSpeak (recommended for soothing delivery)
+// week.dj.engine === undefined      → chirpSpeak (Google Chirp 3 HD, the original engine)
+async function djSpeak(text, outPath) {
+  if (week.dj.engine === "elevenlabs") return elevenSpeak(text, outPath);
+  return chirpSpeak(text, outPath);
+}
+
 async function chirpSpeak(text, outPath) {
   const [response] = await tts.synthesizeSpeech({
     input: { text },
@@ -136,6 +148,44 @@ async function chirpSpeak(text, outPath) {
     },
   });
   const buf = Buffer.from(response.audioContent);
+  await fs.writeFile(outPath, buf);
+  return buf.length;
+}
+
+const ELEVEN_API = "https://api.elevenlabs.io/v1/text-to-speech";
+
+async function elevenSpeak(text, outPath) {
+  const apiKey = process.env.ELEVENLABS_API_KEY;
+  if (!apiKey) {
+    throw new Error(
+      "ELEVENLABS_API_KEY not set. Add it to .env.local or export it."
+    );
+  }
+  const voiceId = week.dj.voice;
+  const model = week.dj.elevenlabs_model ?? "eleven_multilingual_v2";
+  const res = await fetch(`${ELEVEN_API}/${voiceId}`, {
+    method: "POST",
+    headers: {
+      "xi-api-key": apiKey,
+      "Content-Type": "application/json",
+      Accept: "audio/mpeg",
+    },
+    body: JSON.stringify({
+      text,
+      model_id: model,
+      voice_settings: {
+        stability: week.dj.stability ?? 0.5,
+        similarity_boost: week.dj.similarity_boost ?? 0.75,
+        style: week.dj.style ?? 0.4,
+        use_speaker_boost: true,
+      },
+    }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`ElevenLabs ${res.status}: ${body.slice(0, 300)}`);
+  }
+  const buf = Buffer.from(await res.arrayBuffer());
   await fs.writeFile(outPath, buf);
   return buf.length;
 }
@@ -181,7 +231,7 @@ Return ONLY the spoken text. No JSON, no quotes, no formatting. Just what Mira s
     return { text };
   }
   console.log(`  [00] intro · synth…`);
-  const bytes = await chirpSpeak(text, path.join(outputDir, "00-intro.mp3"));
+  const bytes = await djSpeak(text, path.join(outputDir, "00-intro.mp3"));
   console.log(`  [00] intro · ${bytes} bytes`);
   return { text };
 }
@@ -201,7 +251,7 @@ Return ONLY the spoken text. No JSON, no quotes, no formatting.`
 
   if (args["skip-voice"]) return { text };
   console.log(`  [${pad2(order)}] outro · synth…`);
-  const bytes = await chirpSpeak(text, path.join(outputDir, `${pad2(order)}-outro.mp3`));
+  const bytes = await djSpeak(text, path.join(outputDir, `${pad2(order)}-outro.mp3`));
   console.log(`  [${pad2(order)}] outro · ${bytes} bytes`);
   return { text };
 }
@@ -228,7 +278,7 @@ Return ONLY the spoken text. No JSON, no quotes, no formatting. 15–25 seconds 
 
   if (!args["skip-voice"]) {
     try {
-      const b = await chirpSpeak(text, path.join(outputDir, `${pad2(order)}-dj.mp3`));
+      const b = await djSpeak(text, path.join(outputDir, `${pad2(order)}-dj.mp3`));
       console.log(`  ${prefix} · dj voice · ${b} bytes`);
       voiceOk = true;
     } catch (e) {
@@ -274,7 +324,7 @@ if (args["resynth-voice"]) {
       const filename = path.basename(seg.dj_intro_url);
       const out = path.join(outputDir, filename);
       try {
-        const bytes = await chirpSpeak(seg.dj_intro_text, out);
+        const bytes = await djSpeak(seg.dj_intro_text, out);
         console.log(`  [${pad2(seg.order)}] ${filename} · ${bytes} bytes`);
       } catch (e) {
         console.error(`  [${pad2(seg.order)}] ${filename} FAILED · ${e.message}`);

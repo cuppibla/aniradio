@@ -5,9 +5,11 @@
   "theme": "the freeway at 2am, almost nobody on it",
   "dj": {
     "name": "Theo",
-    "voice": "en-US-Chirp3-HD-Charon",
-    "speaking_rate": 0.88,
-    "pitch": -1.0,
+    "engine": "elevenlabs",
+    "voice": "0mLOQqwA3kovxF1ID7z6",
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.35,
     "persona": "the only voice on the radio after 2am. deep, calm, not too cool. notices the road, the light, the rear-view. lowercase, '...' for pauses. no DJ posturing. like a friend in the passenger seat who knows when to be quiet."
   },
   "palette": ["#FF3DA8", "#1A0A3A"],

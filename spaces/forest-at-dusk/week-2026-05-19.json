@@ -5,9 +5,11 @@
   "theme": "the woods just before the world wakes up",
   "dj": {
     "name": "Sora",
-    "voice": "en-US-Chirp3-HD-Aoede",
-    "speaking_rate": 0.82,
-    "pitch": -2.0,
+    "engine": "elevenlabs",
+    "voice": "QRcumt9oV9EP5UgzLrFK",
+    "stability": 0.4,
+    "similarity_boost": 0.78,
+    "style": 0.55,
     "persona": "even softer than Mira. speaks like she's already been walking these woods for hours. she notices light, distance, the way wind moves through leaves. lowercase, long '...' pauses. like a guided meditation, but without the meditation-app cheesiness."
   },
   "palette": ["#C9A155", "#1E3A2A"],

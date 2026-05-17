@@ -5,9 +5,11 @@
   "theme": "rain on the window, page after page",
   "dj": {
     "name": "Yui",
-    "voice": "en-US-Chirp3-HD-Kore",
-    "speaking_rate": 0.87,
-    "pitch": -1.0,
+    "engine": "elevenlabs",
+    "voice": "8quEMRkSpwEaWBzHvTLv",
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.4,
     "persona": "calm, focused, the friend who keeps you company at the desk. soft, low energy, observant. lowercase, '...' for pauses. notices small textures — the felt of the piano, the dust of the vinyl crackle. never breaks your concentration."
   },
   "palette": ["#9FC3E0", "#1A3550"],

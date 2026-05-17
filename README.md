@@ -194,14 +194,6 @@ The filter is real and worth knowing. Reliable triggers across our ~140 generati
 | "distant cicadas" / "dawn birdsong" / "footsteps on leaves" / "running water" | "high-pitched synth shimmer evoking [thing]" / named chord progressions |
 | 4–5 minute pieces with "no rhythm" | Shorten to ~2 min and add "very minimal soft brushed percussion" |
 
-## Roadmap
-
-- [ ] **ElevenLabs voice upgrade.** Per-DJ voice clones for "soothing & charming" delivery beyond what Chirp's optimized-for-clarity model offers.
-- [ ] **Archive weeks UI.** Browse and play prior weeks per room.
-- [ ] **Mobile layouts.** Player is desktop-first today.
-- [ ] **Listener telemetry.** Anonymous "who's in which room" indicator on the lobby cards (the green pulse is currently static).
-- [ ] **More rooms.** Easy to add: author a new `spaces/<slug>/week-*.json`, write a `<Scene />` component, drop it in `SCENES`.
-
 ## License
 
 MIT. See [LICENSE](LICENSE).

@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- **ElevenLabs voice engine** (`elevenSpeak()` in `scripts/generate-space.mjs`). Per-DJ `engine: "elevenlabs"` + `voice` voice id, with optional `stability` / `similarity_boost` / `style` knobs. Dispatcher (`djSpeak()`) picks Chirp or ElevenLabs based on the DJ config — no breaking change to existing rooms.
+- **`.env.local` auto-load** via `process.loadEnvFile()`. `ELEVENLABS_API_KEY` is picked up automatically; no need to pass `--env-file` on every run.
+- All six rooms switched to ElevenLabs in their `week-2026-05-19.json`. Each DJ gets a hand-picked voice from Annie's Voice Library + tuned `stability` / `style` per persona (softest for Sora at 0.4/0.55, most stable for Theo at 0.55/0.35).
+
+### Note
+- Calling Voice Library voices through the ElevenLabs API requires a paid tier (Starter $6 / Creator $11 / Pro $99). On the Free tier, only the 9 default voices (Adam, Antoni, Arnold, Bella, Domi, Elli, Josh, Rachel, Sam) are API-accessible. The wired voices in this repo will return `402 paid_plan_required` until the account is upgraded. The fallback is graceful: existing Chirp 3 HD mp3s on disk continue to play, only new synthesis is blocked.
+
+### Removed
+- Roadmap section from README (decisions made; tracking via tickets instead).
+
 ## v0.1.0 — initial release (2026-05-16)
 
 First public version: lobby + six pre-generated rooms, all DJ voices and music in place.

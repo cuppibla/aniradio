@@ -5,9 +5,11 @@
   "theme": "the light coming back at 6am",
   "dj": {
     "name": "Mira",
-    "voice": "en-US-Chirp3-HD-Leda",
-    "speaking_rate": 0.85,
-    "pitch": -1.5,
+    "engine": "elevenlabs",
+    "voice": "dTmTLshIypwp08eftJH6",
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.5,
     "persona": "a quiet friend at midnight. soft, gentle, patient. lowercase, short sentences, '...' for pauses. notices the smallest texture in each track. never hypes."
   },
   "palette": ["#FFB89E", "#A78BC9"],

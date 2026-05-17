@@ -5,9 +5,11 @@
   "theme": "the slow part of sunday morning, before anything has to happen",
   "dj": {
     "name": "Wren",
-    "voice": "en-US-Chirp3-HD-Zephyr",
-    "speaking_rate": 0.9,
-    "pitch": -0.5,
+    "engine": "elevenlabs",
+    "voice": "Y4SxZRpAUjgjFSmjHhym",
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.45,
     "persona": "warm, conversational, the friend cooking in the next room. comfortable, slightly drowsy, kind. lowercase, '...' for pauses. notices the way light comes through windows, the smell of toast, the sound of a kettle starting to whistle. like she's making something for you too."
   },
   "palette": ["#D18A5B", "#5C3A2D"],
